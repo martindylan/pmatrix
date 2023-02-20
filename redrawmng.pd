@@ -1,0 +1,18 @@
+#N canvas 685 52 679 692 12;
+#X obj 14 29 r \$1-note-to-\$2;
+#X msg 14 159 bang;
+#X obj 14 184 delay 5;
+#X msg 14 209 gui redraw;
+#X obj 14 234 s camomile;
+#X obj 24 54 r \$1-lfo1-to-\$2;
+#X obj 44 104 r \$1-lfo0-to-\$2;
+#X obj 54 129 r \$1-env0-to-\$2;
+#X obj 34 79 r \$1-env1-to-\$2;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;

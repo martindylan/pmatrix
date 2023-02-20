@@ -1,0 +1,42 @@
+#N canvas 913 52 451 692 12;
+#X obj 12 12 inlet;
+#X obj 12 67 f;
+#X obj 29 92 r \$1-note-to-\$2-amount;
+#X obj 47 117 r \$1-note-to-\$2-invert;
+#X obj 82 167 r \$1-lfo1-to-\$2-amount;
+#X obj 152 267 r \$1-lfo0-to-\$2-amount;
+#X obj 30 42 r \$1-note-to-\$2;
+#X obj 12 537 outlet;
+#X obj 64 142 r \$1-lfo1-to-\$2;
+#X obj 134 242 r \$1-lfo0-to-\$2;
+#X obj 205 342 loadbang;
+#X obj 205 367 symbol \$2;
+#X obj 12 397 pack f f f f f f f f f f f s;
+#X obj 99 192 r \$1-env1-to-\$2;
+#X obj 169 292 r \$1-env0-to-\$2;
+#X obj 187 317 r \$1-env0-to-\$2-amount;
+#X msg 12 422 add2 \$12 note \$1 \, addcomma \, add2 \$12 note amount
+\$2 \, addcomma \, add2 \$12 note invert \$3 \, addcomma \, add2 \$12
+lfo1 \$4 \, addcomma \, add2 \$12 lfo1 amount \$5 \, addcomma \, add2
+\$12 env1 \$6 \, addcomma \, add2 \$12 env1 amount \$7 \, addcomma
+\, add2 \$12 lfo0 \$8 \, addcomma \, add2 \$12 lfo0 amount \$9 \, addcomma
+\, add2 \$12 env0 \$10 \, addcomma \, add2 \$12 env0 amount \$11 \,
+addcomma;
+#X obj 117 217 r \$1-env1-to-\$2-amount;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 12 1;
+#X connect 3 0 12 2;
+#X connect 4 0 12 4;
+#X connect 5 0 12 8;
+#X connect 6 0 1 1;
+#X connect 8 0 12 3;
+#X connect 9 0 12 7;
+#X connect 10 0 11 0;
+#X connect 11 0 12 11;
+#X connect 12 0 16 0;
+#X connect 13 0 12 5;
+#X connect 14 0 12 9;
+#X connect 15 0 12 10;
+#X connect 16 0 7 0;
+#X connect 17 0 12 6;

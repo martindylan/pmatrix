@@ -1,0 +1,1555 @@
+#N canvas 913 52 451 692 12;
+#X obj 49 265 osc~;
+#X obj 49 290 *~, f 13;
+#X obj 10 205 phasor~;
+#X obj 10 491 cos~;
+#X obj 10 315 +~, f 6;
+#X obj 137 240 line~;
+#X msg 137 215 \$1 10;
+#X obj 49 240 *~, f 10;
+#X obj 301 491 *~, f 5;
+#X obj 10 65 mtof;
+#X obj 10 541 bob~, f 17;
+#X msg 61 341 \$1 1;
+#X obj 61 366 line~;
+#X obj 137 265 +~, f 7;
+#X msg 126 441 \$1 1;
+#X obj 126 466 line~;
+#X obj 126 516 +~;
+#X obj 99 65 s \$0-note;
+#X msg 117 115 \$1 1;
+#X obj 117 140 line~;
+#X obj 117 165 +~, f 7;
+#X obj 301 441 *~;
+#X obj 319 141 loadbang;
+#X msg 319 166 1;
+#X obj 319 191 -~, f 5;
+#X obj 10 641 *~;
+#X msg 28 591 \$1 1;
+#X obj 28 616 line~;
+#X obj 1075 483 -;
+#X obj 1085 443 t b f;
+#X obj 1057 588 /;
+#X obj 1057 563 -, f 9;
+#X obj 1057 508 r \$0-note;
+#X obj 1057 613 s \$0-note-map;
+#X obj 351 166 ./notemng \$0 amp;
+#X obj 217 466 ./envmng \$0 0 amp;
+#X obj 799 413 ./lfo \$0 0;
+#X obj 619 413 ./lfo \$0 1;
+#X obj 137 190 r \$0-mod;
+#X obj 126 416 r \$0-res;
+#X obj 28 566 r \$0-overdrive;
+#X obj 1104 413 r \$0-note-min;
+#X obj 1075 388 r \$0-note-max;
+#X obj 369 241 ./lfomng \$0 1 amp;
+#X obj 319 291 *~;
+#X obj 337 216 loadbang;
+#X obj 337 266 -~, f 5;
+#X obj 319 341 *~;
+#X obj 221 316 ./envmng \$0 1 amp;
+#X msg 337 241 1;
+#X obj 319 366 *~, f 5;
+#X obj 351 291 loadbang;
+#X obj 351 341 -~, f 5;
+#X obj 319 416 *~;
+#X msg 351 316 1;
+#X obj 383 316 ./lfomng \$0 0 amp;
+#X obj 221 391 ./envmng \$0 0 amp;
+#X obj 1057 538 clip, f 14;
+#X obj 61 316 r \$0-freq;
+#X obj 639 94 cnv 15 548 243 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 862 243 cnv 15 211 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 977 292 vsl 10 32 0 1 0 0 \$0-note-to-res-amount-s \$0-note-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 991 290 tgl 10 0 \$0-note-to-res-invert-s \$0-note-to-res-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 991 260 hsl 64 10 0.12 12 1 0 \$0-res-s \$0-res-r resonance
+5 -8 0 10 -87692 -253816 -33289 0 1;
+#X obj 1008 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-res-amount-s \$0-lfo1-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1025 292 vsl 10 32 0 1 0 0 \$0-env1-to-res-amount-s \$0-env1-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1041 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-res-amount-s \$0-lfo0-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1058 292 vsl 10 32 0 1 0 0 \$0-env0-to-res-amount-s \$0-env0-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 869 260 hsl 64 10 50 5000 1 0 \$0-freq-s \$0-freq-r frequency
+5 -8 0 10 -87692 -253816 -33289 6300 1;
+#X obj 880 290 tgl 10 0 \$0-note-to-freq-invert-s \$0-note-to-freq-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 897 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-freq-amount-s \$0-lfo1-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 914 292 vsl 10 32 0 1 0 0 \$0-env1-to-freq-amount-s \$0-env1-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 930 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-freq-amount-s \$0-lfo0-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 947 292 vsl 10 32 0 1 0 0 \$0-env0-to-freq-amount-s \$0-env0-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 866 292 vsl 10 32 0 1 0 0 \$0-note-to-freq-amount-s \$0-note-to-freq-amount-r
+empty 14 30 0 10 -253816 -33289 -33289 0 1;
+#X obj 644 243 cnv 15 212 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 680 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-harm-amount-s \$0-lfo1-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 649 292 vsl 10 32 0 1 0 0 \$0-note-to-harm-amount-s \$0-note-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 663 290 tgl 10 0 \$0-note-to-harm-invert-s \$0-note-to-harm-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 774 260 hsl 64 10 0.02 2 1 0 \$0-mod-s \$0-mod-r modulation
+2 -8 0 10 -139265 -253816 -33289 0 1;
+#X obj 760 292 vsl 10 32 0 1 0 0 \$0-note-to-mod-amount-s \$0-note-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 774 290 tgl 10 0 \$0-note-to-mod-invert-s \$0-note-to-mod-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 671 260 nbx 1 14 1 7 0 0 \$0-harm-s \$0-harm-r harmonic -14
+-8 0 10 -139265 -253816 -33289 1 256;
+#X obj 791 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-mod-amount-s \$0-lfo1-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 697 292 vsl 10 32 0 1 0 0 \$0-env1-to-harm-amount-s \$0-env1-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 713 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-harm-amount-s \$0-lfo0-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 730 292 vsl 10 32 0 1 0 0 \$0-env0-to-harm-amount-s \$0-env0-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 808 292 vsl 10 32 0 1 0 0 \$0-env1-to-mod-amount-s \$0-env1-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 824 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-mod-amount-s \$0-lfo0-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 841 292 vsl 10 32 0 1 0 0 \$0-env0-to-mod-amount-s \$0-env0-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1079 243 cnv 15 103 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1086 292 vsl 10 32 0 0.95 0 0 \$0-note-to-amp-amount-s \$0-note-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1101 290 tgl 10 0 \$0-note-to-amp-invert-s \$0-note-to-amp-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 1117 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-amp-amount-s \$0-lfo1-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1134 292 vsl 10 32 0 1 0 0 \$0-env1-to-amp-amount-s \$0-env1-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1150 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-amp-amount-s \$0-lfo0-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1167 292 vsl 10 32 0 1 0 0 \$0-env0-to-amp-amount-s \$0-env0-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 3100 1;
+#X obj 1130 260 hsl 45 10 1 6 1 0 \$0-overdrive-s \$0-overdrive-r overdrive
+-5 -8 0 10 -46292 -253816 -33289 0 1;
+#X obj 1086 260 nbx 3 14 -100 9 0 0 \$0-amp-s \$0-amp-r amp 8 -8 0
+10 -46292 -253816 -33289 0 256;
+#X obj 644 99 cnv 15 152 138 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 769 177 tgl 15 0 \$0-env0-to-freq \$0-env0-to-freq-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 727 177 tgl 15 0 \$0-env1-to-freq \$0-env1-to-freq-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 748 197 tgl 15 0 \$0-lfo0-to-res \$0-lfo0-to-res-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 177 tgl 15 0 \$0-lfo0-to-freq \$0-lfo0-to-freq-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 706 197 tgl 15 0 \$0-lfo1-to-res \$0-lfo1-to-res-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 137 tgl 15 0 \$0-lfo1-to-harm \$0-lfo1-to-harm-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 157 tgl 15 0 \$0-lfo1-to-mod \$0-lfo1-to-mod-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 177 tgl 15 0 \$0-lfo1-to-freq \$0-lfo1-to-freq-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 685 197 tgl 15 0 \$0-note-to-res \$0-note-to-res-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 137 tgl 15 0 \$0-note-to-harm-s \$0-note-to-harm-r empty
+17 7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 157 tgl 15 0 \$0-note-to-mod \$0-note-to-mod-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 217 tgl 15 0 \$0-note-to-amp \$0-note-to-amp-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 177 tgl 15 0 \$0-note-to-freq \$0-note-to-freq-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 748 157 tgl 15 0 \$0-lfo0-to-mod \$0-lfo0-to-mod-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 137 tgl 15 0 \$0-lfo0-to-harm \$0-lfo0-to-harm-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 217 tgl 15 0 \$0-lfo0-to-amp \$0-lfo0-to-amp-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 706 217 tgl 15 0 \$0-lfo1-to-amp \$0-lfo1-to-amp-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 727 197 tgl 15 0 \$0-env1-to-res \$0-env1-to-res-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 137 tgl 15 0 \$0-env1-to-harm \$0-env1-to-harm-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 157 tgl 15 0 \$0-env1-to-mod \$0-env1-to-mod-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 217 tgl 15 0 \$0-env1-to-amp \$0-env1-to-amp-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 769 197 tgl 15 0 \$0-env0-to-res \$0-env0-to-res-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 137 tgl 15 0 \$0-env0-to-harm \$0-env0-to-harm-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 157 tgl 15 0 \$0-env0-to-mod \$0-env0-to-mod-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 217 tgl 15 0 \$0-env0-to-amp \$0-env0-to-amp-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
+0;
+#X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
+0;
+#X obj 650 138 cnv 11 30 13 empty empty harm. 1 6 0 10 -139265 -253816
+0;
+#X obj 661 218 cnv 11 19 13 empty empty amp 1 6 0 10 -46292 -253816
+0;
+#X obj 656 158 cnv 11 24 13 empty empty mod. 1 6 0 10 -139265 -253816
+0;
+#X obj 802 131 cnv 15 46 69 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 807 149 nbx 3 15 0 127 0 0 \$0-note-min-s \$0-note-min-r min
+10 -8 0 10 -222086 -253816 -33289 0 256;
+#X obj 807 179 nbx 3 15 0 127 0 0 \$0-note-max-s \$0-note-max-r max
+10 -8 0 10 -222086 -253816 -33289 127 256;
+#X obj 854 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 862 145 hsl 48 10 0.2 20 1 0 \$0-lfo1-freq-s \$0-lfo1-freq-r
+freq 12 -8 0 10 -26482 -253816 -33289 0 1;
+#X obj 860 172 hradio 10 1 0 5 \$0-lfo1-shape-s \$0-lfo1-shape-r sinewave
+1 -8 0 10 -26482 -253816 -33289 0;
+#X obj 1021 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1029 145 hsl 48 10 0.2 20 1 0 \$0-lfo0-freq-s \$0-lfo0-freq-r
+freq 12 -8 0 10 -23130 -253816 -33289 0 1;
+#X obj 1027 172 hradio 10 1 0 5 \$0-lfo0-shape-s \$0-lfo0-shape-r sinewave
+1 -8 0 10 -23130 -253816 -33289 0;
+#X obj 1090 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1095 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 190 cnv 15 15 15 empty \$0-bg rel 0 6 0 10 -253816 -33289
+0;
+#X obj 1116 128 nbx 4 15 0 1e+37 0 0 \$0-env0-att-s \$0-env0-att-r
+ms 50 8 0 10 -33289 -253816 -33289 5 256;
+#X obj 1116 148 nbx 4 15 0 1e+37 0 0 \$0-env0-dec-s \$0-env0-dec-r
+ms 50 8 0 10 -33289 -253816 -33289 0 256;
+#X obj 1116 168 nbx 4 15 0 100 0 0 \$0-env0-sus-s \$0-env0-sus-r %
+50 8 0 10 -33289 -253816 -33289 100 256;
+#X obj 1116 188 nbx 4 15 0 1e+37 0 0 \$0-env0-rel-s \$0-env0-rel-r
+ms 50 8 0 10 -33289 -253816 -33289 50 256;
+#X obj 1021 99 cnv 15 63 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 762 102 cnv 15 15 15 empty \$0-bg env_A 0 6 0 10 -253816 -33289
+0;
+#X obj 741 118 cnv 15 15 15 empty \$0-bg lfo_A 0 6 0 10 -253816 -33289
+0;
+#X obj 720 102 cnv 15 15 15 empty \$0-bg env_B 0 6 0 10 -253816 -33289
+0;
+#X obj 699 118 cnv 15 15 15 empty \$0-bg lfo_B 0 6 0 10 -253816 -33289
+0;
+#X obj 681 102 cnv 15 15 15 empty \$0-bg note 0 6 0 10 -253816 -33289
+0;
+#X obj 918 99 cnv 15 102 18 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1038 107 cnv 15 15 15 empty \$0-bg lfo_A 0 6 0 10 -253816 -33289
+0;
+#X obj 923 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 928 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 -253816 -33289
+0;
+#X obj 928 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 -253816 -33289
+0;
+#X obj 928 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 -253816 -33289
+0;
+#X obj 928 190 cnv 15 15 5 empty \$0-bg rel 0 6 0 10 -253816 -33289
+0;
+#X obj 949 128 nbx 4 15 0 1e+37 0 0 \$0-env1-att-s \$0-env1-att-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 148 nbx 4 15 0 1e+37 0 0 \$0-env1-dec-s \$0-env1-dec-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 168 nbx 4 15 0 100 0 0 \$0-env1-sus-s \$0-env1-sus-r % 50
+8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 188 nbx 4 15 0 1e+37 0 0 \$0-env1-rel-s \$0-env1-rel-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 955 102 cnv 15 15 15 empty \$0-bg env_B 0 6 0 10 -253816 -33289
+0;
+#X obj 966 253 cnv 2 2 69 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 749 253 cnv 2 2 69 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 775 118 cnv 2 1 15 empty empty empty 20 12 0 14 -33289 -253816
+0;
+#X obj 733 118 cnv 2 1 15 empty empty empty 20 12 0 14 -33289 -253816
+0;
+#X obj 691 118 cnv 2 1 15 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 144 491 ./mng \$0 res 8;
+#X obj 865 187 bng 10 250 50 0 \$0-lfo1-reset \$0-lfo1-reset-r reset
+13 5 0 10 -87424 -262144 -33289;
+#X obj 1032 187 bng 10 250 50 0 \$0-lfo0-reset \$0-lfo0-reset-r reset
+13 5 0 10 -23130 -253816 -33289;
+#X obj 619 548 ./uimng \$0 res;
+#X obj 619 498 ./uimng \$0 mod;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 619 523 ./uimng \$0 freq;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 354 391 r \$0-amp;
+#X obj 354 416 + 100;
+#X obj 354 441 dbtorms;
+#X msg 354 466 \$1 10;
+#X obj 354 491 line~;
+#X obj 301 516 *~, f 8;
+#X obj 301 541 hip~ 5;
+#X obj 301 566 hip~ 5;
+#X obj 61 416 +~;
+#X obj 79 391 ./mng \$0 freq 1000;
+#X obj 301 591 *~ 1;
+#X obj 10 10 inlet;
+#X obj 189 65 / 127;
+#X obj 301 641 outlet~;
+#X obj 698 413 ./env \$0 1;
+#X obj 189 90 s \$0-vel;
+#X obj 878 413 ./env \$0 0;
+#X obj 183 241 ./mng \$0 mod 0.5;
+#X obj 942 260 tgl 10 0 \$0-freq-tune-s \$0-freq-tune-r tune -6 -8
+0 10 -87692 -253816 -33289 0 1;
+#X obj 11 516 *~ 1.42;
+#X obj 10 175 line~;
+#X obj 10 35 poly 1 1, f 26;
+#N canvas 685 52 679 692 camomile 0;
+#X obj 10 11 ./param.set 1 \$0-note-min;
+#X obj 10 36 ./param.get.int 1 \$0-note-min;
+#X obj 10 61 ./param.set 2 \$0-note-max;
+#X obj 10 86 ./param.get.int 2 \$0-note-max;
+#X obj 10 121 ./param.set 3 \$0-lfo1-freq;
+#X obj 10 146 ./param.get 3 \$0-lfo1-freq;
+#X obj 10 171 ./param.set 4 \$0-lfo1-shape;
+#X obj 10 196 ./param.get.int 4 \$0-lfo1-shape;
+#X obj 10 221 ./param.set 5 \$0-env1-att;
+#X obj 10 246 ./param.get 5 \$0-env1-att;
+#X obj 10 271 ./param.set 6 \$0-env1-dec;
+#X obj 10 296 ./param.get 6 \$0-env1-dec;
+#X obj 10 321 ./param.set 7 \$0-env1-sus;
+#X obj 10 346 ./param.get 7 \$0-env1-sus;
+#X obj 10 371 ./param.set 8 \$0-env1-rel;
+#X obj 10 396 ./param.get 8 \$0-env1-rel;
+#X obj 236 121 ./param.set 9 \$0-lfo0-freq;
+#X obj 236 146 ./param.get 9 \$0-lfo0-freq;
+#X obj 236 171 ./param.set 10 \$0-lfo0-shape;
+#X obj 236 196 ./param.get.int 10 \$0-lfo0-shape;
+#X obj 236 221 ./param.set 11 \$0-env0-att;
+#X obj 236 246 ./param.get 11 \$0-env0-att;
+#X obj 236 271 ./param.set 12 \$0-env0-dec;
+#X obj 236 296 ./param.get 12 \$0-env0-dec;
+#X obj 236 321 ./param.set 13 \$0-env0-sus;
+#X obj 236 346 ./param.get 13 \$0-env0-sus;
+#X obj 236 371 ./param.set 14 \$0-env0-rel;
+#X obj 236 396 ./param.get 14 \$0-env0-rel;
+#N canvas 684 52 338 692 mod 0;
+#X obj 10 11 ./param.set 27 \$0-mod;
+#X obj 10 36 ./param.get 27 \$0-mod;
+#X obj 10 71 ./param.set 28 \$0-note-to-mod;
+#X obj 10 96 ./param.get.tog 28 \$0-note-to-mod;
+#X obj 10 121 ./param.set 29 \$0-note-to-mod-amount;
+#X obj 10 146 ./param.get 29 \$0-note-to-mod-amount;
+#X obj 10 171 ./param.set 30 \$0-note-to-mod-invert;
+#X obj 10 196 ./param.get.tog 30 \$0-note-to-mod-invert;
+#X obj 10 231 ./param.set 31 \$0-lfo1-to-mod;
+#X obj 10 256 ./param.get.tog 31 \$0-lfo1-to-mod;
+#X obj 10 281 ./param.set 32 \$0-lfo1-to-mod-amount;
+#X obj 10 306 ./param.get 32 \$0-lfo1-to-mod-amount;
+#X obj 10 341 ./param.set 33 \$0-env1-to-mod;
+#X obj 10 366 ./param.get.tog 33 \$0-env1-to-mod;
+#X obj 10 391 ./param.set 34 \$0-env1-to-mod-amount;
+#X obj 10 416 ./param.get 34 \$0-env1-to-mod-amount;
+#X obj 10 451 ./param.set 35 \$0-lfo0-to-mod;
+#X obj 10 476 ./param.get.tog 35 \$0-lfo0-to-mod;
+#X obj 10 501 ./param.set 36 \$0-lfo0-to-mod-amount;
+#X obj 10 526 ./param.get 36 \$0-lfo0-to-mod-amount;
+#X obj 10 561 ./param.set 37 \$0-env0-to-mod;
+#X obj 10 586 ./param.get.tog 37 \$0-env0-to-mod;
+#X obj 10 611 ./param.set 38 \$0-env0-to-mod-amount;
+#X obj 10 636 ./param.get 38 \$0-env0-to-mod-amount;
+#X restore 10 456 pd mod;
+#N canvas 913 52 451 692 res 0;
+#X obj 10 11 ./param.set 51 \$0-res;
+#X obj 10 36 ./param.get 51 \$0-res;
+#X obj 10 71 ./param.set 52 \$0-note-to-res;
+#X obj 10 96 ./param.get.tog 52 \$0-note-to-res;
+#X obj 10 121 ./param.set 53 \$0-note-to-res-amount;
+#X obj 10 146 ./param.get 53 \$0-note-to-res-amount;
+#X obj 10 171 ./param.set 54 \$0-note-to-res-invert;
+#X obj 10 196 ./param.get.tog 54 \$0-note-to-res-invert;
+#X obj 10 231 ./param.set 55 \$0-lfo1-to-res;
+#X obj 10 256 ./param.get.tog 55 \$0-lfo1-to-res;
+#X obj 10 281 ./param.set 56 \$0-lfo1-to-res-amount;
+#X obj 10 306 ./param.get 56 \$0-lfo1-to-res-amount;
+#X obj 10 341 ./param.set 57 \$0-env1-to-res;
+#X obj 10 366 ./param.get.tog 57 \$0-env1-to-res;
+#X obj 10 391 ./param.set 58 \$0-env1-to-res-amount;
+#X obj 10 416 ./param.get 58 \$0-env1-to-res-amount;
+#X obj 10 451 ./param.set 59 \$0-lfo0-to-res;
+#X obj 10 476 ./param.get.tog 59 \$0-lfo0-to-res;
+#X obj 10 501 ./param.set 60 \$0-lfo0-to-res-amount;
+#X obj 10 526 ./param.get 60 \$0-lfo0-to-res-amount;
+#X obj 10 561 ./param.set 61 \$0-env0-to-res;
+#X obj 10 586 ./param.get.tog 61 \$0-env0-to-res;
+#X obj 10 611 ./param.set 62 \$0-env0-to-res-amount;
+#X obj 10 636 ./param.get 62 \$0-env0-to-res-amount;
+#X restore 10 506 pd res;
+#N canvas 684 52 338 692 freq 0;
+#X obj 10 11 ./param.set 39 \$0-freq;
+#X obj 10 36 ./param.get 39 \$0-freq;
+#X obj 10 71 ./param.set 40 \$0-note-to-freq;
+#X obj 10 96 ./param.get.tog 40 \$0-note-to-freq;
+#X obj 10 121 ./param.set 41 \$0-note-to-freq-amount;
+#X obj 10 146 ./param.get 41 \$0-note-to-freq-amount;
+#X obj 10 171 ./param.set 42 \$0-note-to-freq-invert;
+#X obj 10 196 ./param.get.tog 42 \$0-note-to-freq-invert;
+#X obj 10 231 ./param.set 43 \$0-lfo1-to-freq;
+#X obj 10 256 ./param.get.tog 43 \$0-lfo1-to-freq;
+#X obj 10 281 ./param.set 44 \$0-lfo1-to-freq-amount;
+#X obj 10 306 ./param.get 44 \$0-lfo1-to-freq-amount;
+#X obj 10 341 ./param.set 45 \$0-env1-to-freq;
+#X obj 10 366 ./param.get.tog 45 \$0-env1-to-freq;
+#X obj 10 391 ./param.set 46 \$0-env1-to-freq-amount;
+#X obj 10 416 ./param.get 46 \$0-env1-to-freq-amount;
+#X obj 10 451 ./param.set 47 \$0-lfo0-to-freq;
+#X obj 10 476 ./param.get.tog 47 \$0-lfo0-to-freq;
+#X obj 10 501 ./param.set 48 \$0-lfo0-to-freq-amount;
+#X obj 10 526 ./param.get 48 \$0-lfo0-to-freq-amount;
+#X obj 10 561 ./param.set 49 \$0-env0-to-freq;
+#X obj 10 586 ./param.get.tog 49 \$0-env0-to-freq;
+#X obj 10 611 ./param.set 50 \$0-env0-to-freq-amount;
+#X obj 10 636 ./param.get 50 \$0-env0-to-freq-amount;
+#X restore 10 481 pd freq;
+#N canvas 684 52 338 692 amp 0;
+#X obj 10 11 ./param.set 63 \$0-amp;
+#X obj 10 36 ./param.get 63 \$0-amp;
+#X obj 10 71 ./param.set 64 \$0-note-to-amp;
+#X obj 10 96 ./param.get.tog 64 \$0-note-to-amp;
+#X obj 10 121 ./param.set 65 \$0-note-to-amp-amount;
+#X obj 10 146 ./param.get 65 \$0-note-to-amp-amount;
+#X obj 10 171 ./param.set 66 \$0-note-to-amp-invert;
+#X obj 10 196 ./param.get.tog 66 \$0-note-to-amp-invert;
+#X obj 10 231 ./param.set 67 \$0-lfo1-to-amp;
+#X obj 10 256 ./param.get.tog 67 \$0-lfo1-to-amp;
+#X obj 10 281 ./param.set 68 \$0-lfo1-to-amp-amount;
+#X obj 10 306 ./param.get 68 \$0-lfo1-to-amp-amount;
+#X obj 10 341 ./param.set 69 \$0-env1-to-amp;
+#X obj 10 366 ./param.get.tog 69 \$0-env1-to-amp;
+#X obj 10 391 ./param.set 70 \$0-env1-to-amp-amount;
+#X obj 10 416 ./param.get 70 \$0-env1-to-amp-amount;
+#X obj 10 451 ./param.set 71 \$0-lfo0-to-amp;
+#X obj 10 476 ./param.get.tog 71 \$0-lfo0-to-amp;
+#X obj 10 501 ./param.set 72 \$0-lfo0-to-amp-amount;
+#X obj 10 526 ./param.get 72 \$0-lfo0-to-amp-amount;
+#X obj 10 561 ./param.set 73 \$0-env0-to-amp;
+#X obj 10 586 ./param.get.tog 73 \$0-env0-to-amp;
+#X obj 10 611 ./param.set 74 \$0-env0-to-amp-amount;
+#X obj 10 636 ./param.get 74 \$0-env0-to-amp-amount;
+#X restore 10 531 pd amp;
+#N canvas 913 52 451 692 harm 0;
+#X obj 10 11 ./param.set 15 \$0-harm;
+#X obj 10 36 ./param.get 15 \$0-harm;
+#X obj 10 71 ./param.set 16 \$0-note-to-harm;
+#X obj 10 96 ./param.get.tog 16 \$0-note-to-harm;
+#X obj 10 121 ./param.set 17 \$0-note-to-harm-amount;
+#X obj 10 146 ./param.get 17 \$0-note-to-harm-amount;
+#X obj 10 171 ./param.set 18 \$0-note-to-harm-invert;
+#X obj 10 196 ./param.get.tog 18 \$0-note-to-harm-invert;
+#X obj 10 231 ./param.set 19 \$0-lfo1-to-harm;
+#X obj 10 256 ./param.get.tog 19 \$0-lfo1-to-harm;
+#X obj 10 281 ./param.set 20 \$0-lfo1-to-harm-amount;
+#X obj 10 306 ./param.get 20 \$0-lfo1-to-harm-amount;
+#X obj 10 341 ./param.set 21 \$0-env1-to-harm;
+#X obj 10 366 ./param.get.tog 21 \$0-env1-to-harm;
+#X obj 10 391 ./param.set 22 \$0-env1-to-harm-amount;
+#X obj 10 416 ./param.get 22 \$0-env1-to-harm-amount;
+#X obj 10 451 ./param.set 23 \$0-lfo0-to-harm;
+#X obj 10 476 ./param.get.tog 23 \$0-lfo0-to-harm;
+#X obj 10 501 ./param.set 24 \$0-lfo0-to-harm-amount;
+#X obj 10 526 ./param.get 24 \$0-lfo0-to-harm-amount;
+#X obj 10 561 ./param.set 25 \$0-env0-to-harm;
+#X obj 10 586 ./param.get.tog 25 \$0-env0-to-harm;
+#X obj 10 611 ./param.set 26 \$0-env0-to-harm-amount;
+#X obj 10 636 ./param.get 26 \$0-env0-to-harm-amount;
+#X restore 10 431 pd harm;
+#N canvas 913 52 451 692 extra 0;
+#X obj 10 12 ./param.set 75 \$0-harm-int;
+#X obj 10 37 ./param.get.tog 75 \$0-harm-int;
+#X obj 10 62 ./param.set 76 \$0-freq-tune;
+#X obj 10 87 ./param.get.tog 76 \$0-freq-tune;
+#X obj 10 112 ./param.set 77 \$0-overdrive;
+#X obj 10 137 ./param.get.tog 77 \$0-overdrive;
+#X obj 10 162 ./param.set 78 \$0-gliss;
+#X obj 10 187 ./param.get 78 \$0-gliss;
+#X obj 10 212 ./param.set 79 \$0-freq-mult;
+#X obj 10 237 ./param.get 79 \$0-freq-mult;
+#X restore 10 556 pd extra;
+#X restore 1200 596 pd camomile;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-freq-tog empty 1 4 0 10
+-253816 -253816 0;
+#X obj 745 498 ./redrawmng \$0 mod;
+#X obj 745 523 ./redrawmng \$0 freq;
+#X obj 745 548 ./redrawmng \$0 res;
+#X obj 745 573 ./redrawmng \$0 amp;
+#N canvas 685 52 679 692 softlimit 0;
+#X obj 100 189 *~ 2;
+#X obj 75 214 pow~;
+#X msg 75 164 2.71828;
+#X obj 114 244 +~ 1;
+#X obj 75 244 -~ 1;
+#X obj 75 269 /~, f 6;
+#X obj 75 139 loadbang;
+#X obj 100 114 inlet~;
+#X obj 75 294 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 1;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 2 0;
+#X connect 7 0 0 0;
+#X restore 10 666 pd softlimit;
+#N canvas 685 52 679 692 softlimit 0;
+#X obj 100 189 *~ 2;
+#X obj 75 214 pow~;
+#X msg 75 164 2.71828;
+#X obj 114 244 +~ 1;
+#X obj 75 244 -~ 1;
+#X obj 75 269 /~, f 6;
+#X obj 75 139 loadbang;
+#X obj 100 114 inlet~;
+#X obj 75 294 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 1;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 2 0;
+#X connect 7 0 0 0;
+#X restore 301 616 pd softlimit;
+#X obj 745 473 ./redrawmng \$0 harm;
+#X obj 619 473 ./uimng \$0 harm;
+#X obj 163 140 ./mng \$0 harm 7;
+#X obj 117 90 r \$0-harm;
+#X obj 619 573 ./uimng \$0 amp;
+#X obj 923 214 cnv 15 92 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1090 214 cnv 10 92 23 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1125 218 cnv 15 15 15 empty \$0-preset-label default 0 7 0 10
+-253816 -33289 0;
+#X obj 1110 220 bng 10 250 50 0 \$0-preset-next \$0-preset-next-r >
+3 5 0 10 -33289 -253816 -253816;
+#X obj 1100 105 bng 10 250 50 0 \$0-preset-prev \$0-preset-prev-r <
+2 5 0 10 -33289 -253816 -253816;
+#X obj 721 260 tgl 10 0 \$0-harm-int-s \$0-harm-int-r int -3 -8 0 10
+-139265 -253816 -33289 0 1;
+#X obj 454 33 inlet;
+#N canvas 685 52 679 692 route-inlet-messages 0;
+#X obj 12 12 inlet;
+#N canvas 913 52 451 692 state 0;
+#X obj 19 37 inlet;
+#X obj 19 62 t b b, f 25;
+#X msg 191 372 set;
+#N canvas 2 52 1362 692 globals 0;
+#X obj 12 12 inlet;
+#X obj 12 67 f;
+#X obj 30 42 r \$0-harm;
+#X obj 67 142 r \$0-freq;
+#X obj 85 167 r \$0-freq-tune;
+#X obj 30 92 r \$0-harm-int;
+#X obj 48 117 r \$0-mod;
+#X obj 122 217 r \$0-res;
+#X obj 140 242 r \$0-amp;
+#X obj 158 267 r \$0-overdrive;
+#X obj 12 442 outlet;
+#X obj 177 292 r \$0-gliss;
+#X obj 103 192 r \$0-freq-mult;
+#X obj 12 322 pack f f f f f f f f f f;
+#X msg 12 352 add2 harm \$1 \, addcomma \, add2 harm int \$2 \, addcomma
+\, add2 mod \$3 \, addcomma \, add2 freq \$4 \, addcomma \, add2 freq
+tune \$5 \, addcomma \, add2 freq mult \$6 \, addcomma \, add2 res
+\$7 \, addcomma \, add2 amp \$8 \, addcomma \, add2 overdrive \$9 \,
+addcomma \, add2 gliss \$10 \, addcomma;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 1 1;
+#X connect 3 0 13 3;
+#X connect 4 0 13 4;
+#X connect 5 0 13 1;
+#X connect 6 0 13 2;
+#X connect 7 0 13 6;
+#X connect 8 0 13 7;
+#X connect 9 0 13 8;
+#X connect 11 0 13 9;
+#X connect 12 0 13 5;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X restore 177 122 pd globals;
+#N canvas 913 52 451 692 note 0;
+#X obj 14 26 inlet;
+#X obj 14 81 f;
+#X obj 32 56 r \$0-note-min;
+#X obj 67 81 r \$0-note-max;
+#X obj 14 106 pack f f;
+#X msg 14 131 add2 note min \$1 \, addcomma \, add2 note max \$2 \,
+addcomma;
+#X obj 14 156 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X restore 161 147 pd note;
+#N canvas 684 52 338 692 lfo1 0;
+#X obj 14 26 inlet;
+#X obj 14 81 f;
+#X obj 14 106 pack f f;
+#X obj 14 156 outlet;
+#X obj 32 56 r \$0-lfo1-freq;
+#X obj 67 81 r \$0-lfo1-shape;
+#X msg 14 131 add2 lfo1 freq \$1 \, addcomma \, add2 lfo1 shape \$2
+\, addcomma;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 4 0 1 1;
+#X connect 5 0 2 1;
+#X connect 6 0 3 0;
+#X restore 145 172 pd lfo1;
+#N canvas 913 52 451 692 lfo0 0;
+#X obj 14 26 inlet;
+#X obj 14 81 f;
+#X obj 14 106 pack f f;
+#X obj 14 156 outlet;
+#X obj 32 56 r \$0-lfo0-freq;
+#X obj 67 81 r \$0-lfo0-shape;
+#X msg 14 131 add2 lfo0 freq \$1 \, addcomma \, add2 lfo0 shape \$2
+\, addcomma;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 4 0 1 1;
+#X connect 5 0 2 1;
+#X connect 6 0 3 0;
+#X restore 113 222 pd lfo0;
+#N canvas 913 52 451 692 env0 0;
+#X obj 14 26 inlet;
+#X obj 14 81 f;
+#X obj 14 251 outlet;
+#X obj 14 186 pack f f f f;
+#X msg 14 211 add2 env0 att \$1 \, addcomma \, add2 env0 dec \$2 \,
+addcomma \, add2 env0 sus \$3 \, addcomma \, add2 env0 rel \$4 \, addcomma
+;
+#X obj 95 156 r \$0-env0-rel;
+#X obj 68 131 r \$0-env0-sus;
+#X obj 41 106 r \$0-env0-dec;
+#X obj 32 56 r \$0-env0-att;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 3;
+#X connect 6 0 3 2;
+#X connect 7 0 3 1;
+#X connect 8 0 1 1;
+#X restore 98 247 pd env0;
+#N canvas 913 52 451 692 env1 0;
+#X obj 14 26 inlet;
+#X obj 14 81 f;
+#X obj 14 251 outlet;
+#X obj 14 186 pack f f f f;
+#X obj 32 56 r \$0-env1-att;
+#X obj 41 106 r \$0-env1-dec;
+#X obj 68 131 r \$0-env1-sus;
+#X obj 95 156 r \$0-env1-rel;
+#X msg 14 211 add2 env1 att \$1 \, addcomma \, add2 env1 dec \$2 \,
+addcomma \, add2 env1 sus \$3 \, addcomma \, add2 env1 rel \$4 \, addcomma
+;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 1;
+#X connect 5 0 3 1;
+#X connect 6 0 3 2;
+#X connect 7 0 3 3;
+#X connect 8 0 2 0;
+#X restore 129 197 pd env1;
+#X obj 19 92 t b b b b b b b b b b b;
+#X obj 82 272 ./statemng \$0 harm;
+#X obj 66 297 ./statemng \$0 mod;
+#X obj 50 322 ./statemng \$0 freq;
+#X obj 34 347 ./statemng \$0 res;
+#X obj 19 372 ./statemng \$0 amp;
+#X obj 19 432 s \$0-state;
+#X connect 0 0 1 0;
+#X connect 1 0 9 0;
+#X connect 1 1 2 0;
+#X connect 2 0 15 0;
+#X connect 3 0 15 0;
+#X connect 4 0 15 0;
+#X connect 5 0 15 0;
+#X connect 6 0 15 0;
+#X connect 7 0 15 0;
+#X connect 8 0 15 0;
+#X connect 9 0 14 0;
+#X connect 9 1 13 0;
+#X connect 9 2 12 0;
+#X connect 9 3 11 0;
+#X connect 9 4 10 0;
+#X connect 9 5 7 0;
+#X connect 9 6 6 0;
+#X connect 9 7 8 0;
+#X connect 9 8 5 0;
+#X connect 9 9 4 0;
+#X connect 9 10 3 0;
+#X connect 10 0 15 0;
+#X connect 11 0 15 0;
+#X connect 12 0 15 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X restore 517 342 pd state;
+#X obj 12 613 r \$0-error;
+#X msg 12 638 se recibió un mensaje desconocido;
+#X obj 12 663 print pmatrix~;
+#N canvas 1026 52 338 692 harm 0;
+#X obj 37 37 inlet;
+#X obj 37 62 route float int;
+#X msg 47 92 set \$1;
+#X obj 47 117 s \$0-harm-r;
+#X obj 37 142 s \$0-harm;
+#X msg 98 197 set \$1;
+#X obj 88 172 != 0;
+#X obj 139 307 ./routemng \$0 harm;
+#X obj 98 222 s \$0-harm-int-r;
+#X obj 88 247 s \$0-harm-int;
+#X obj 156 62 loadbang;
+#X msg 156 87 1;
+#X msg 181 87 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 1 6 0;
+#X connect 1 2 7 0;
+#X connect 2 0 3 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X connect 6 0 9 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 3 0;
+#X connect 12 0 8 0;
+#X restore 12 67 pd harm;
+#N canvas 913 52 451 692 freq 0;
+#X obj 37 37 inlet;
+#X msg 47 92 set \$1;
+#X msg 95 197 set \$1;
+#X obj 85 172 != 0;
+#X obj 85 247 s \$0-freq-tune;
+#X obj 95 222 s \$0-freq-tune-r;
+#X obj 37 142 s \$0-freq;
+#X obj 47 117 s \$0-freq-r;
+#X obj 181 367 ./routemng \$0 freq;
+#X obj 198 62 loadbang;
+#X msg 198 87 5000;
+#X msg 230 87 0;
+#X obj 37 62 route float tune mult;
+#X msg 255 87 1;
+#X msg 143 277 set \$1;
+#X obj 143 302 s \$0-freq-mult-r;
+#X obj 133 327 s \$0-freq-mult;
+#X connect 0 0 12 0;
+#X connect 1 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 9 0 13 0;
+#X connect 10 0 7 0;
+#X connect 11 0 5 0;
+#X connect 12 0 1 0;
+#X connect 12 0 6 0;
+#X connect 12 1 3 0;
+#X connect 12 2 14 0;
+#X connect 12 2 16 0;
+#X connect 12 3 8 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X restore 97 67 pd freq;
+#X msg 235 67 set \$1;
+#X obj 235 92 s \$0-overdrive-r;
+#X obj 225 117 s \$0-overdrive;
+#X obj 559 382 s \$0-error;
+#X obj 310 227 route note lfo1 env1 lfo0 env0 state;
+#N canvas 913 52 451 692 note 0;
+#X obj 8 19 inlet;
+#X obj 8 44 route min max;
+#X msg 18 74 set \$1;
+#X obj 18 99 s \$0-note-min-r;
+#X obj 8 124 s \$0-note-min;
+#X msg 62 154 set \$1;
+#X obj 62 179 s \$0-note-max-r;
+#X obj 52 204 s \$0-note-max;
+#X obj 96 264 s \$0-error;
+#X obj 113 44 loadbang;
+#X msg 113 69 0;
+#X msg 138 69 127;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 3 0;
+#X connect 11 0 6 0;
+#X restore 310 257 pd note;
+#N canvas 913 52 451 692 lfo1 0;
+#X obj 8 19 inlet;
+#X msg 18 74 set \$1;
+#X msg 72 154 set \$1;
+#X obj 117 264 s \$0-error;
+#X obj 8 44 route freq shape;
+#X obj 18 99 s \$0-lfo1-freq-r;
+#X obj 8 124 s \$0-lfo1-freq;
+#X obj 72 179 s \$0-lfo1-shape-r;
+#X obj 62 204 s \$0-lfo1-shape;
+#X obj 134 44 loadbang;
+#X msg 134 69 0.2;
+#X msg 159 69 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 0;
+#X connect 4 0 1 0;
+#X connect 4 0 6 0;
+#X connect 4 1 2 0;
+#X connect 4 1 8 0;
+#X connect 4 2 3 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 5 0;
+#X connect 11 0 7 0;
+#X restore 351 282 pd lfo1;
+#N canvas 913 52 451 692 lfo0 0;
+#X obj 8 19 inlet;
+#X msg 18 74 set \$1;
+#X msg 72 154 set \$1;
+#X obj 117 264 s \$0-error;
+#X obj 8 44 route freq shape;
+#X obj 18 99 s \$0-lfo0-freq-r;
+#X obj 8 124 s \$0-lfo0-freq;
+#X obj 72 179 s \$0-lfo0-shape-r;
+#X obj 62 204 s \$0-lfo0-shape;
+#X obj 134 44 loadbang;
+#X msg 134 69 0.2;
+#X msg 159 69 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 0;
+#X connect 4 0 1 0;
+#X connect 4 0 6 0;
+#X connect 4 1 2 0;
+#X connect 4 1 8 0;
+#X connect 4 2 3 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 5 0;
+#X connect 11 0 7 0;
+#X restore 434 282 pd lfo0;
+#N canvas 913 52 451 692 env1 0;
+#X obj 8 19 inlet;
+#X msg 18 74 set \$1;
+#X msg 54 154 set \$1;
+#X obj 152 424 s \$0-error;
+#X obj 8 44 route att dec sus rel;
+#X obj 18 99 s \$0-env1-att-r;
+#X obj 8 124 s \$0-env1-att;
+#X obj 54 179 s \$0-env1-dec-r;
+#X obj 44 204 s \$0-env1-dec;
+#X msg 90 234 set \$1;
+#X msg 126 314 set \$1;
+#X obj 126 339 s \$0-env1-rel-r;
+#X obj 116 364 s \$0-env1-rel;
+#X obj 80 284 s \$0-env1-sus;
+#X obj 90 259 s \$0-env1-sus-r;
+#X obj 169 44 loadbang;
+#X msg 169 69 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 0;
+#X connect 4 0 1 0;
+#X connect 4 0 6 0;
+#X connect 4 1 2 0;
+#X connect 4 1 8 0;
+#X connect 4 2 9 0;
+#X connect 4 2 13 0;
+#X connect 4 3 10 0;
+#X connect 4 3 12 0;
+#X connect 4 4 3 0;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 5 0;
+#X connect 16 0 7 0;
+#X connect 16 0 14 0;
+#X connect 16 0 11 0;
+#X restore 393 257 pd env1;
+#N canvas 1026 52 338 692 env0 0;
+#X obj 8 19 inlet;
+#X msg 18 74 set \$1;
+#X msg 54 154 set \$1;
+#X obj 152 424 s \$0-error;
+#X obj 8 44 route att dec sus rel;
+#X msg 90 234 set \$1;
+#X msg 126 314 set \$1;
+#X obj 18 99 s \$0-env0-att-r;
+#X obj 8 124 s \$0-env0-att;
+#X obj 54 179 s \$0-env0-dec-r;
+#X obj 44 204 s \$0-env0-dec;
+#X obj 90 259 s \$0-env0-sus-r;
+#X obj 80 284 s \$0-env0-sus;
+#X obj 126 339 s \$0-env0-rel-r;
+#X obj 116 364 s \$0-env0-rel;
+#X obj 169 44 loadbang;
+#X msg 169 69 5;
+#X msg 194 69 0;
+#X msg 219 69 100;
+#X msg 244 69 50;
+#X connect 0 0 4 0;
+#X connect 1 0 7 0;
+#X connect 2 0 9 0;
+#X connect 4 0 1 0;
+#X connect 4 0 8 0;
+#X connect 4 1 2 0;
+#X connect 4 1 10 0;
+#X connect 4 2 5 0;
+#X connect 4 2 12 0;
+#X connect 4 3 6 0;
+#X connect 4 3 14 0;
+#X connect 4 4 3 0;
+#X connect 5 0 11 0;
+#X connect 6 0 13 0;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
+#X connect 15 0 18 0;
+#X connect 15 0 19 0;
+#X connect 16 0 7 0;
+#X connect 17 0 9 0;
+#X connect 18 0 11 0;
+#X connect 19 0 13 0;
+#X restore 476 257 pd env0;
+#N canvas 913 52 451 692 mod 0;
+#X obj 18 23 inlet;
+#X obj 18 48 route float;
+#X msg 28 78 set \$1;
+#X obj 28 103 s \$0-mod-r;
+#X obj 18 128 s \$0-mod;
+#X obj 92 188 ./routemng \$0 mod;
+#X obj 109 48 loadbang;
+#X msg 109 73 0.02;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X restore 54 97 pd mod;
+#N canvas 913 52 451 692 res 0;
+#X obj 18 23 inlet;
+#X obj 18 48 route float;
+#X msg 28 78 set \$1;
+#X obj 28 103 s \$0-res-r;
+#X obj 18 128 s \$0-res;
+#X obj 92 188 ./routemng \$0 res;
+#X obj 109 48 loadbang;
+#X msg 109 73 0.12;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X restore 140 97 pd res;
+#N canvas 1026 52 338 692 amp 0;
+#X obj 18 23 inlet;
+#X obj 18 48 route float;
+#X msg 28 78 set \$1;
+#X obj 28 103 s \$0-amp-r;
+#X obj 18 128 s \$0-amp;
+#X obj 92 188 ./routemng \$0 amp;
+#X obj 109 48 loadbang;
+#X msg 109 73 0;
+#X msg 134 73 env0 1 \, env0 amount 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 3 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 3 0;
+#X connect 8 0 5 0;
+#X restore 182 67 pd amp;
+#X obj 387 37 loadbang;
+#X msg 387 62 1;
+#X obj 12 37 route harm mod freq res amp overdrive gliss;
+#X msg 412 62 0;
+#X msg 277 147 set \$1;
+#X obj 277 172 s \$0-gliss-r;
+#X obj 267 197 s \$0-gliss;
+#X connect 0 0 22 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 7 0 8 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 11 2 15 0;
+#X connect 11 3 14 0;
+#X connect 11 4 16 0;
+#X connect 11 5 1 0;
+#X connect 11 6 10 0;
+#X connect 20 0 21 0;
+#X connect 20 0 23 0;
+#X connect 21 0 8 0;
+#X connect 22 0 5 0;
+#X connect 22 1 17 0;
+#X connect 22 2 6 0;
+#X connect 22 3 18 0;
+#X connect 22 4 19 0;
+#X connect 22 5 7 0;
+#X connect 22 5 9 0;
+#X connect 22 6 24 0;
+#X connect 22 6 26 0;
+#X connect 22 7 11 0;
+#X connect 23 0 25 0;
+#X connect 24 0 25 0;
+#X restore 454 73 pd route-inlet-messages;
+#X obj 399 641 outlet;
+#X obj 399 616 r \$0-state;
+#N canvas 913 52 451 692 presets 0;
+#X obj 37 62 r \$0-preset-next;
+#X obj 12 12 r \$0-preset-prev;
+#X obj 37 87 t b b;
+#X obj 12 37 t b b;
+#X msg 44 127 -1;
+#X msg 69 127 1;
+#X obj 12 157 +, f 5;
+#X obj 12 127 f;
+#X obj 12 232 t f f;
+#X obj 12 207 change;
+#N canvas 1026 52 338 692 default 0;
+#X obj 37 37 inlet;
+#X msg 37 62 harm 1 \, harm int 0 \, mod 0.02 \, freq 5000 \, freq
+tune 0 \, freq mult 1 \, res 0.12 \, amp 0 \, overdrive 1 \, gliss
+0 \, note min 0 \, note max 127 \, lfo1 freq 0.2 \, lfo1 shape 0 \,
+env1 att 0 \, env1 dec 0 \, env1 sus 0 \, env1 rel 0 \, lfo0 freq 0.2
+\, lfo0 shape 0 \, env0 att 5 \, env0 dec 0 \, env0 sus 100 \, env0
+rel 50 \, harm note 0 \, harm note amount 0 \, harm note invert 0 \,
+harm lfo1 0 \, harm lfo1 amount 0 \, harm env1 0 \, harm env1 amount
+0 \, harm lfo0 0 \, harm lfo0 amount 0 \, harm env0 0 \, harm env0
+amount 0 \, mod note 0 \, mod note amount 0 \, mod note invert 0 \,
+mod lfo1 0 \, mod lfo1 amount 0 \, mod env1 0 \, mod env1 amount 0
+\, mod lfo0 0 \, mod lfo0 amount 0 \, mod env0 0 \, mod env0 amount
+0 \, freq note 0 \, freq note amount 0 \, freq note invert 0 \, freq
+lfo1 0 \, freq lfo1 amount 0 \, freq env1 0 \, freq env1 amount 0 \,
+freq lfo0 0 \, freq lfo0 amount 0 \, freq env0 0 \, freq env0 amount
+0 \, res note 0 \, res note amount 0 \, res note invert 0 \, res lfo1
+0 \, res lfo1 amount 0 \, res env1 0 \, res env1 amount 0 \, res lfo0
+0 \, res lfo0 amount 0 \, res env0 0 \, res env0 amount 0 \, amp note
+0 \, amp note amount 0 \, amp note invert 0 \, amp lfo1 0 \, amp lfo1
+amount 0 \, amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0
+amount 0 \, amp env0 1 \, amp env0 amount 1 \,;
+#X obj 37 422 outlet;
+#X obj 47 397 s \$0-preset-label;
+#X msg 47 372 label default;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 4 0 3 0;
+#X restore 12 317 pd default;
+#X obj 12 457 outlet;
+#N canvas 1026 52 338 692 bassy 0;
+#X obj 37 37 inlet;
+#X obj 37 437 outlet;
+#X obj 47 412 s \$0-preset-label;
+#X msg 47 387 label bassy;
+#X msg 37 62 harm 1 \, harm int 0 \, mod 0.12436 \, freq 310.9 \, freq
+tune 0 \, freq mult 1 \, res 0.12 \, amp 0 \, overdrive 2.65733 \,
+gliss 15 \, note min 0 \, note max 127 \, lfo1 freq 0.360039 \, lfo1
+shape 0 \, env1 att 5 \, env1 dec 103 \, env1 sus 0 \, env1 rel 0 \,
+lfo0 freq 14.9063 \, lfo0 shape 4 \, env0 att 4 \, env0 dec 200 \,
+env0 sus 40 \, env0 rel 20 \, harm note 0 \, harm note amount 0 \,
+harm note invert 0 \, harm lfo1 0 \, harm lfo1 amount 0 \, harm env1
+0 \, harm env1 amount 0 \, harm lfo0 0 \, harm lfo0 amount 0 \, harm
+env0 0 \, harm env0 amount 0 \, mod note 0 \, mod note amount 0 \,
+mod note invert 0 \, mod lfo1 1 \, mod lfo1 amount 0.741935 \, mod
+env1 1 \, mod env1 amount 0.83871 \, mod lfo0 0 \, mod lfo0 amount
+0 \, mod env0 0 \, mod env0 amount 0 \, freq note 0 \, freq note amount
+0 \, freq note invert 0 \, freq lfo1 1 \, freq lfo1 amount 0.419355
+\, freq env1 0 \, freq env1 amount 0 \, freq lfo0 0 \, freq lfo0 amount
+0 \, freq env0 0 \, freq env0 amount 0 \, res note 0 \, res note amount
+0 \, res note invert 0 \, res lfo1 0 \, res lfo1 amount 0 \, res env1
+0 \, res env1 amount 0 \, res lfo0 1 \, res lfo0 amount 0.0645161 \,
+res env0 0 \, res env0 amount 0 \, amp note 0 \, amp note amount 0
+\, amp note invert 0 \, amp lfo1 0 \, amp lfo1 amount 0 \, amp env1
+0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0 \, amp env0
+1 \, amp env0 amount 1 \,;
+#X connect 0 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X restore 29 342 pd bassy;
+#N canvas 1026 52 338 692 watertune 0;
+#X obj 37 37 inlet;
+#X obj 37 437 outlet;
+#X obj 47 412 s \$0-preset-label;
+#X msg 37 62 harm 1 \, harm int 1 \, mod 0.0446927 \, freq 5000 \,
+freq tune 1 \, freq mult 3 \, res 1.33906 \, amp 0 \, overdrive 2.0813
+\, gliss 0 \, note min 0 \, note max 127 \, lfo1 freq 6.80683 \, lfo1
+shape 2 \, env1 att 0 \, env1 dec 0 \, env1 sus 0 \, env1 rel 0 \,
+lfo0 freq 1.56548 \, lfo0 shape 0 \, env0 att 364 \, env0 dec 153 \,
+env0 sus 55 \, env0 rel 482 \, harm note 0 \, harm note amount 0 \,
+harm note invert 0 \, harm lfo1 1 \, harm lfo1 amount 1 \, harm env1
+0 \, harm env1 amount 0 \, harm lfo0 0 \, harm lfo0 amount 0 \, harm
+env0 0 \, harm env0 amount 0 \, mod note 0 \, mod note amount 0 \,
+mod note invert 0 \, mod lfo1 0 \, mod lfo1 amount 0 \, mod env1 0
+\, mod env1 amount 0 \, mod lfo0 1 \, mod lfo0 amount 0.258065 \, mod
+env0 0 \, mod env0 amount 0 \, freq note 0 \, freq note amount 0 \,
+freq note invert 0 \, freq lfo1 0 \, freq lfo1 amount 0 \, freq env1
+0 \, freq env1 amount 0 \, freq lfo0 0 \, freq lfo0 amount 0 \, freq
+env0 0 \, freq env0 amount 0 \, res note 0 \, res note amount 0 \,
+res note invert 0 \, res lfo1 0 \, res lfo1 amount 0 \, res env1 0
+\, res env1 amount 0 \, res lfo0 0 \, res lfo0 amount 0 \, res env0
+0 \, res env0 amount 0 \, amp note 0 \, amp note amount 0 \, amp note
+invert 0 \, amp lfo1 0 \, amp lfo1 amount 0 \, amp env1 0 \, amp env1
+amount 0 \, amp lfo0 0 \, amp lfo0 amount 0 \, amp env0 1 \, amp env0
+amount 1 \,;
+#X msg 47 387 label watertune;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X restore 82 417 pd watertune;
+#N canvas 1026 52 338 692 chiplead 0;
+#X obj 7 7 inlet;
+#X obj 7 422 outlet;
+#X obj 17 397 s \$0-preset-label;
+#X msg 17 372 label chiplead;
+#X msg 7 32 harm 2 \, harm int 1 \, mod 0.107446 \, freq 5000 \, freq
+tune 1 \, freq mult 3 \, res 0.12 \, amp 0 \, overdrive 1.1769 \, gliss
+40 \, note min 40 \, note max 70 \, lfo1 freq 0.532797 \, lfo1 shape
+3 \, env1 att 50 \, env1 dec 200 \, env1 sus 0 \, env1 rel 0 \, lfo0
+freq 0.397102 \, lfo0 shape 1 \, env0 att 360 \, env0 dec 210 \, env0
+sus 60 \, env0 rel 630 \, harm note 0 \, harm note amount 0 \, harm
+note invert 0 \, harm lfo1 0 \, harm lfo1 amount 0 \, harm env1 1 \,
+harm env1 amount 0.774194 \, harm lfo0 0 \, harm lfo0 amount 0 \, harm
+env0 0 \, harm env0 amount 0 \, mod note 1 \, mod note amount 0.354839
+\, mod note invert 1 \, mod lfo1 0 \, mod lfo1 amount 0 \, mod env1
+0 \, mod env1 amount 0 \, mod lfo0 0 \, mod lfo0 amount 0 \, mod env0
+0 \, mod env0 amount 0 \, freq note 0 \, freq note amount 0 \, freq
+note invert 0 \, freq lfo1 0 \, freq lfo1 amount 0.483871 \, freq env1
+0 \, freq env1 amount 0 \, freq lfo0 1 \, freq lfo0 amount 0.677419
+\, freq env0 0 \, freq env0 amount 0 \, res note 0 \, res note amount
+0 \, res note invert 0 \, res lfo1 1 \, res lfo1 amount 0.258065 \,
+res env1 0 \, res env1 amount 0 \, res lfo0 0 \, res lfo0 amount 0.387097
+\, res env0 0 \, res env0 amount 0 \, amp note 0 \, amp note amount
+0 \, amp note invert 0 \, amp lfo1 0 \, amp lfo1 amount 0 \, amp env1
+0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0 \, amp env0
+1 \, amp env0 amount 1 \,;
+#X connect 0 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X restore 47 367 pd chiplead;
+#X obj 12 292 sel 0 1 2 3 4;
+#X obj 12 182 clip 0 4;
+#N canvas 1026 52 338 692 drifty 0;
+#X obj 37 37 inlet;
+#X obj 37 452 outlet;
+#X obj 47 427 s \$0-preset-label;
+#X msg 47 402 label drifty;
+#X msg 37 62 harm 7 \, harm int 0 \, mod 0.0692967 \, freq 557.942
+\, freq tune 0 \, freq mult 1 \, res 0.693563 \, amp 0 \, overdrive
+1 \, gliss 0 \, note min 0 \, note max 127 \, lfo1 freq 0.959138 \,
+lfo1 shape 4 \, env1 att 10 \, env1 dec 53 \, env1 sus 21 \, env1 rel
+57 \, lfo0 freq 0.360039 \, lfo0 shape 0 \, env0 att 400 \, env0 dec
+200 \, env0 sus 60 \, env0 rel 1200 \, harm note 0 \, harm note amount
+0 \, harm note invert 0 \, harm lfo1 0 \, harm lfo1 amount 0 \, harm
+env1 1 \, harm env1 amount 0.516129 \, harm lfo0 1 \, harm lfo0 amount
+0.129032 \, harm env0 0 \, harm env0 amount 0 \, mod note 0 \, mod
+note amount 0 \, mod note invert 0 \, mod lfo1 1 \, mod lfo1 amount
+0.0967742 \, mod env1 0 \, mod env1 amount 0 \, mod lfo0 0 \, mod lfo0
+amount 0 \, mod env0 1 \, mod env0 amount 1 \, freq note 0 \, freq
+note amount 0 \, freq note invert 0 \, freq lfo1 0 \, freq lfo1 amount
+0 \, freq env1 0 \, freq env1 amount 0 \, freq lfo0 1 \, freq lfo0
+amount 1 \, freq env0 0 \, freq env0 amount 0 \, res note 0 \, res
+note amount 0 \, res note invert 0 \, res lfo1 0 \, res lfo1 amount
+0 \, res env1 0 \, res env1 amount 0 \, res lfo0 1 \, res lfo0 amount
+0.387097 \, res env0 0 \, res env0 amount 0 \, amp note 0 \, amp note
+amount 0 \, amp note invert 0 \, amp lfo1 0 \, amp lfo1 amount 0 \,
+amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
+\, amp env0 1 \, amp env0 amount 1 \,;
+#X connect 0 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X restore 64 392 pd drifty;
+#X msg 138 327 pos \$1 \$2;
+#X msg 198 297 1095 220;
+#X msg 138 297 1100 105;
+#X obj 138 352 s \$0-preset-prev-r;
+#X obj 138 272 sel 0, f 9;
+#X obj 278 262 sel 4, f 9;
+#X msg 338 287 1110 220;
+#X msg 278 317 pos \$1 \$2;
+#X obj 278 342 s \$0-preset-next-r;
+#X msg 278 287 1100 105;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 7 0;
+#X connect 2 1 5 0;
+#X connect 3 0 7 0;
+#X connect 3 1 4 0;
+#X connect 4 0 6 1;
+#X connect 5 0 6 1;
+#X connect 6 0 16 0;
+#X connect 7 0 6 0;
+#X connect 8 0 15 0;
+#X connect 8 1 7 1;
+#X connect 8 1 22 0;
+#X connect 8 1 23 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 15 0 10 0;
+#X connect 15 1 12 0;
+#X connect 15 2 14 0;
+#X connect 15 3 17 0;
+#X connect 15 4 13 0;
+#X connect 16 0 9 0;
+#X connect 17 0 11 0;
+#X connect 18 0 21 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 22 0 20 0;
+#X connect 22 1 19 0;
+#X connect 23 0 27 0;
+#X connect 23 1 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 27 0 25 0;
+#X restore 503 43 pd presets;
+#N canvas 685 52 679 692 round 0;
+#X obj 95 161 +~ 0.5;
+#X obj 95 221 -~;
+#X obj 113 191 wrap~;
+#X obj 65 91 inlet~;
+#X obj 65 251 outlet~;
+#X obj 170 11 r \$0-harm-int;
+#X obj 121 41 == 0;
+#X msg 121 66 \$1 10;
+#X obj 121 91 line~;
+#X msg 170 66 \$1 10;
+#X obj 170 91 line~;
+#X obj 65 131 *~;
+#X obj 95 131 *~;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 11 0;
+#X connect 3 0 12 0;
+#X connect 5 0 6 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 1;
+#X connect 9 0 10 0;
+#X connect 10 0 12 1;
+#X connect 11 0 4 0;
+#X connect 12 0 0 0;
+#X restore 72 190 pd round;
+#X obj 927 220 cnv 15 15 15 empty \$0-bg gliss 0 6 0 10 -253816 -33289
+0;
+#X obj 960 218 nbx 3 15 0 999 0 0 \$0-gliss-s \$0-gliss-r ms 41 8 0
+10 -33289 -253816 -33289 0 256;
+#X obj 35 95 r \$0-gliss;
+#X obj 35 120 + 1;
+#X obj 10 145 pack;
+#X obj 1021 209 cnv 15 63 28 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1028 218 bng 10 250 50 0 \$0-random \$0-random-r random 13 5
+0 10 -33289 -253816 -33289;
+#X obj 804 206 cnv 15 15 15 empty \$0-bg pmatrix~ 0 7 0 10 -33289 -253816
+0;
+#X obj 815 222 cnv 15 15 15 empty \$0-bg 2023_dylan_martin 0 7 0 10
+-33289 -253816 0;
+#X obj 830 112 nbx 1 14 1 5 0 0 \$0-freq-mult-s \$0-freq-mult-r multiplier
+-20 -8 0 10 -87692 -253816 -33289 1 256;
+#X obj 802 99 cnv 15 46 26 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 813 110 cnv 15 15 15 empty \$0-bg note 0 6 0 10 -253816 -33289
+0;
+#X obj 849 99 cnv 15 68 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 872 107 cnv 15 15 15 empty \$0-bg lfo_B 0 6 0 10 -253816 -33289
+0;
+#N canvas 685 52 679 692 freq-tune-redraw 0;
+#X obj 464 208 r \$0-freq-tune;
+#X msg 527 238 bang;
+#X obj 527 263 delay 5;
+#X msg 527 288 gui redraw;
+#X obj 527 313 s camomile;
+#X msg 464 313 869 260;
+#X msg 464 363 pos \$1 \$2;
+#X obj 464 388 s \$0-freq-r;
+#X msg 487 338 845 112;
+#X obj 464 238 sel 0 1;
+#X msg 338 363 pos \$1 \$2;
+#X obj 338 388 s \$0-freq-mult-r;
+#X msg 361 338 830 112;
+#X msg 338 313 891 260;
+#X connect 0 0 1 0;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 5 0;
+#X connect 9 0 12 0;
+#X connect 9 1 8 0;
+#X connect 9 1 13 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 0;
+#X restore 745 598 pd freq-tune-redraw;
+#N canvas 685 52 679 692 freq 0;
+#N canvas 685 52 679 692 round 0;
+#X obj 18 31 inlet~;
+#X obj 18 61 +~ 0.5;
+#X obj 18 121 -~;
+#X obj 36 91 wrap~;
+#X obj 18 151 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X restore 278 277 pd round;
+#X obj 232 227 r \$0-freq-mult;
+#X obj 278 252 ./mng \$0 freq 7;
+#X msg 232 252 \$1 10;
+#X obj 232 277 line~;
+#X obj 214 327 *~;
+#X obj 232 302 +~, f 7;
+#X obj 214 177 inlet~;
+#X obj 214 202 *~;
+#X obj 232 72 r \$0-freq-tune;
+#X msg 232 127 \$1 10;
+#X obj 232 152 line~;
+#X obj 102 102 == 0;
+#X msg 102 127 \$1 10;
+#X obj 102 152 line~;
+#X msg 56 227 \$1 1;
+#X obj 56 252 line~;
+#X obj 56 202 r \$0-freq;
+#X obj 56 302 +~;
+#X obj 74 277 ./mng \$0 freq 1000;
+#X obj 56 327 *~, f 7;
+#X obj 214 357 outlet~;
+#X connect 0 0 6 1;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 21 0;
+#X connect 6 0 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 20 1;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 15 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 1;
+#X connect 20 0 21 0;
+#X restore 68 491 pd freq;
+#X obj 1085 99 cnv 15 97 18 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1122 102 cnv 15 15 15 empty \$0-bg env_A 0 6 0 10 -253816 -33289
+0;
+#N canvas 913 52 451 692 preset-redraw 0;
+#X msg 32 85 bang;
+#X obj 32 110 delay 5;
+#X msg 32 135 gui redraw;
+#X obj 32 160 s camomile;
+#X obj 32 30 r \$0-preset-prev;
+#X obj 42 55 r \$0-preset-next;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X restore 745 623 pd preset-redraw;
+#X connect 0 0 1 0;
+#X connect 1 0 4 1;
+#X connect 2 0 4 0;
+#X connect 3 0 220 0;
+#X connect 4 0 3 0;
+#X connect 5 0 13 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X connect 8 0 206 0;
+#X connect 9 0 252 0;
+#X connect 10 0 25 0;
+#X connect 11 0 12 0;
+#X connect 12 0 209 0;
+#X connect 13 0 1 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 10 2;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 247 0;
+#X connect 21 0 8 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 44 0;
+#X connect 25 0 229 0;
+#X connect 26 0 27 0;
+#X connect 27 0 25 1;
+#X connect 28 0 30 1;
+#X connect 29 0 28 0;
+#X connect 29 1 28 1;
+#X connect 29 1 31 1;
+#X connect 30 0 33 0;
+#X connect 31 0 30 0;
+#X connect 32 0 57 0;
+#X connect 34 0 24 1;
+#X connect 35 1 8 1;
+#X connect 38 0 6 0;
+#X connect 39 0 14 0;
+#X connect 40 0 26 0;
+#X connect 41 0 29 0;
+#X connect 41 0 57 1;
+#X connect 42 0 28 0;
+#X connect 42 0 57 2;
+#X connect 43 0 46 1;
+#X connect 44 0 47 0;
+#X connect 45 0 49 0;
+#X connect 46 0 44 1;
+#X connect 47 0 50 0;
+#X connect 48 1 47 1;
+#X connect 49 0 46 0;
+#X connect 50 0 53 0;
+#X connect 51 0 54 0;
+#X connect 52 0 50 1;
+#X connect 53 0 21 1;
+#X connect 54 0 52 0;
+#X connect 55 0 52 1;
+#X connect 56 1 53 1;
+#X connect 57 0 31 0;
+#X connect 58 0 11 0;
+#X connect 171 0 16 1;
+#X connect 201 0 202 0;
+#X connect 202 0 203 0;
+#X connect 203 0 204 0;
+#X connect 204 0 205 0;
+#X connect 205 0 206 1;
+#X connect 206 0 207 0;
+#X connect 207 0 208 0;
+#X connect 208 0 211 0;
+#X connect 210 0 209 1;
+#X connect 211 0 230 0;
+#X connect 212 0 222 0;
+#X connect 213 0 216 0;
+#X connect 218 0 13 1;
+#X connect 220 0 10 0;
+#X connect 221 0 2 0;
+#X connect 221 0 7 0;
+#X connect 221 0 263 0;
+#X connect 222 1 17 0;
+#X connect 222 1 9 0;
+#X connect 222 2 213 0;
+#X connect 229 0 21 0;
+#X connect 230 0 214 0;
+#X connect 233 0 20 1;
+#X connect 234 0 18 0;
+#X connect 242 0 243 0;
+#X connect 245 0 244 0;
+#X connect 246 0 243 0;
+#X connect 247 0 7 1;
+#X connect 250 0 251 0;
+#X connect 251 0 252 1;
+#X connect 252 0 221 0;
+#X connect 263 0 10 1;
+#X coords 0 -1 1 1 550 249 2 638 91;

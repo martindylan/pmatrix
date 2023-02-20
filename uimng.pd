@@ -1,0 +1,11 @@
+#N canvas 685 52 679 692 12;
+#X obj 38 58 ./uimngchild \$1 note \$2;
+#X obj 38 83 ./uimngchild \$1 lfo1 \$2;
+#X obj 38 133 ./uimngchild \$1 lfo0 \$2;
+#X obj 33 224 ./togmng \$1 note \$2;
+#X obj 33 249 ./togmng \$1 lfo1 \$2;
+#X obj 33 299 ./togmng \$1 lfo0 \$2;
+#X obj 33 324 ./togmng \$1 env0 \$2;
+#X obj 33 274 ./togmng \$1 env1 \$2;
+#X obj 38 108 ./uimngchild \$1 env1 \$2;
+#X obj 38 158 ./uimngchild \$1 env0 \$2;
