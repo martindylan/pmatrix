@@ -1,4 +1,4 @@
-#N canvas 685 52 679 692 12;
+#N canvas 2 52 1362 692 12;
 #X obj 49 289 osc~;
 #X obj 49 314 *~, f 13;
 #X obj 10 229 phasor~;
@@ -133,7 +133,7 @@ empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1150 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-amp-amount-s \$0-lfo0-to-amp-amount-r
 empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1167 292 vsl 10 32 0 1 0 0 \$0-env0-to-amp-amount-s \$0-env0-to-amp-amount-r
-empty 0 -9 0 10 -253816 -33289 -33289 3100 1;
+empty 0 -9 0 10 -33289 -253816 -33289 3100 1;
 #X obj 1130 260 hsl 45 10 1 6 1 0 \$0-overdrive-s \$0-overdrive-r overdrive
 -5 -8 0 10 -46292 -253816 -33289 0 1;
 #X obj 1086 260 nbx 3 14 -100 9 0 0 \$0-amp-s \$0-amp-r amp 8 -8 0
@@ -189,7 +189,7 @@ empty 0 -9 0 10 -253816 -33289 -33289 3100 1;
 #X obj 769 157 tgl 15 0 \$0-env0-to-mod-s \$0-env0-to-mod-r empty 17
 7 0 10 -33289 -33289 -33289 0 1;
 #X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
-7 0 10 -33289 -33289 -33289 0 1;
+7 0 10 -33289 -33289 -33289 1 1;
 #X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
 0;
 #X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
@@ -336,7 +336,7 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 -253816 -253816 0;
 #X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-amp-tog empty 20 12 0 14
 -253816 -253816 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
+#X obj 772 220 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
 -253816 -253816 0;
 #X obj 354 415 r \$0-amp;
 #X obj 354 440 + 100;
@@ -2450,4 +2450,4 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 260 0 10 1;
 #X connect 264 0 241 0;
 #X connect 267 0 220 0;
-#X coords 0 -1 1 1 550 245 2 638 93;
+#X coords 0 -1 1 1 550 249 2 638 91;
