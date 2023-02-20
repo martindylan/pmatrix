@@ -1,0 +1,3 @@
+pmatrix~ es un sintetizador monofónico PM/sustractivo semimodular
+
+autor: dylan martin
