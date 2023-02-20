@@ -37,7 +37,7 @@ param -name lfo A to mod amount -min 0 -max 1;
 param -name env A to mod -list off/on;
 param -name env A to mod amount -min 0 -max 1;
 param -name freq -label Hz -min 50 -max 5000;
-param -name note to freq -list off/on -default 0;
+param -name note to freq -list off/on;
 param -name note to freq amount -min 0 -max 1;
 param -name note to freq invert -list off/on;
 param -name lfo B to freq -list off/on;
