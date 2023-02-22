@@ -1,4 +1,4 @@
-#N canvas 285 51 1366 685 12;
+#N canvas 685 52 679 692 12;
 #X obj 49 289 osc~;
 #X obj 49 314 *~, f 13;
 #X obj 10 229 phasor~;
@@ -58,286 +58,10 @@
 #X obj 221 415 ./envmng \$0 0 amp;
 #X obj 1057 538 clip, f 14;
 #X obj 61 340 r \$0-freq;
-#X obj 639 94 cnv 15 548 243 empty empty empty 20 12 0 14 #202020 #404040
-0;
-#X obj 862 243 cnv 15 211 89 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 977 292 vsl 10 32 0 1 0 0 \$0-note-to-res-amount-s \$0-note-to-res-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 991 290 tgl 10 0 \$0-note-to-res-invert-s \$0-note-to-res-invert-r
-invert -12 -7 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 991 260 hsl 64 10 0.12 12 1 0 \$0-res-s \$0-res-r resonance
-5 -8 0 10 #54682c #f4f4dc #202020 0 1;
-#X obj 1008 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-res-amount-s \$0-lfo1-to-res-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1025 292 vsl 10 32 0 1 0 0 \$0-env1-to-res-amount-s \$0-env1-to-res-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1041 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-res-amount-s \$0-lfo0-to-res-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1058 292 vsl 10 32 0 1 0 0 \$0-env0-to-res-amount-s \$0-env0-to-res-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 869 260 hsl 64 10 50 5000 1 0 \$0-freq-s \$0-freq-r frequency
-5 -8 0 10 #54682c #f4f4dc #202020 0 1;
-#X obj 880 290 tgl 10 0 \$0-note-to-freq-invert-s \$0-note-to-freq-invert-r
-invert -12 -7 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 897 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-freq-amount-s \$0-lfo1-to-freq-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 914 292 vsl 10 32 0 1 0 0 \$0-env1-to-freq-amount-s \$0-env1-to-freq-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 930 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-freq-amount-s \$0-lfo0-to-freq-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 947 292 vsl 10 32 0 1 0 0 \$0-env0-to-freq-amount-s \$0-env0-to-freq-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 866 292 vsl 10 32 0 1 0 0 \$0-note-to-freq-amount-s \$0-note-to-freq-amount-r
-empty 14 30 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 644 243 cnv 15 212 89 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 680 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-harm-amount-s \$0-lfo1-to-harm-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 649 292 vsl 10 32 0 1 0 0 \$0-note-to-harm-amount-s \$0-note-to-harm-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 663 290 tgl 10 0 \$0-note-to-harm-invert-s \$0-note-to-harm-invert-r
-invert -12 -7 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 774 260 hsl 64 10 0.02 2 1 0 \$0-mod-s \$0-mod-r modulation
-2 -8 0 10 #880000 #f4f4dc #202020 0 1;
-#X obj 760 292 vsl 10 32 0 1 0 0 \$0-note-to-mod-amount-s \$0-note-to-mod-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 774 290 tgl 10 0 \$0-note-to-mod-invert-s \$0-note-to-mod-invert-r
-invert -12 -7 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 671 260 nbx 1 14 1 7 0 0 \$0-harm-s \$0-harm-r harmonic -14
--8 0 10 #880000 #f4f4dc #202020 0 256;
-#X obj 791 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-mod-amount-s \$0-lfo1-to-mod-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 697 292 vsl 10 32 0 1 0 0 \$0-env1-to-harm-amount-s \$0-env1-to-harm-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 713 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-harm-amount-s \$0-lfo0-to-harm-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 730 292 vsl 10 32 0 1 0 0 \$0-env0-to-harm-amount-s \$0-env0-to-harm-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 808 292 vsl 10 32 0 1 0 0 \$0-env1-to-mod-amount-s \$0-env1-to-mod-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 824 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-mod-amount-s \$0-lfo0-to-mod-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 841 292 vsl 10 32 0 1 0 0 \$0-env0-to-mod-amount-s \$0-env0-to-mod-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1079 243 cnv 15 103 89 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 1086 292 vsl 10 32 0 0.95 0 0 \$0-note-to-amp-amount-s \$0-note-to-amp-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1101 290 tgl 10 0 \$0-note-to-amp-invert-s \$0-note-to-amp-invert-r
-invert -12 -7 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1117 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-amp-amount-s \$0-lfo1-to-amp-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1134 292 vsl 10 32 0 1 0 0 \$0-env1-to-amp-amount-s \$0-env1-to-amp-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1150 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-amp-amount-s \$0-lfo0-to-amp-amount-r
-empty 0 -9 0 10 #f4f4dc #202020 #202020 0 1;
-#X obj 1167 292 vsl 10 32 0 1 0 0 \$0-env0-to-amp-amount-s \$0-env0-to-amp-amount-r
-empty 0 -9 0 10 #202020 #f4f4dc #202020 0 1;
-#X obj 1130 260 hsl 45 10 1 6 1 0 \$0-overdrive-s \$0-overdrive-r overdrive
--5 -8 0 10 #2c4c4c #f4f4dc #202020 0 1;
-#X obj 1086 260 nbx 3 14 -100 9 0 0 \$0-amp-s \$0-amp-r amp 8 -8 0
-10 #2c4c4c #f4f4dc #202020 0 256;
-#X obj 644 99 cnv 15 152 138 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 769 177 tgl 15 0 \$0-env0-to-freq-s \$0-env0-to-freq-r empty
-17 7 0 10 #202020 #202020 #202020 0 1;
-#X obj 727 177 tgl 15 0 \$0-env1-to-freq-s \$0-env1-to-freq-r empty
-17 7 0 10 #ec9438 #ec9438 #ec9438 0 1;
-#X obj 748 197 tgl 15 0 \$0-lfo0-to-res-s \$0-lfo0-to-res-r empty 17
-7 0 10 #14a464 #14a464 #14a464 0 1;
-#X obj 748 177 tgl 15 0 \$0-lfo0-to-freq-s \$0-lfo0-to-freq-r empty
-17 7 0 10 #14a464 #14a464 #14a464 0 1;
-#X obj 706 197 tgl 15 0 \$0-lfo1-to-res-s \$0-lfo1-to-res-r empty 17
-7 0 10 #1874c4 #1874c4 #1874c4 0 1;
-#X obj 706 137 tgl 15 0 \$0-lfo1-to-harm-s \$0-lfo1-to-harm-r empty
-17 7 0 10 #1874c4 #1874c4 #1874c4 0 1;
-#X obj 706 157 tgl 15 0 \$0-lfo1-to-mod-s \$0-lfo1-to-mod-r empty 17
-7 0 10 #1874c4 #1874c4 #1874c4 0 1;
-#X obj 706 177 tgl 15 0 \$0-lfo1-to-freq-s \$0-lfo1-to-freq-r empty
-17 7 0 10 #1874c4 #1874c4 #1874c4 0 1;
-#X obj 685 197 tgl 15 0 \$0-note-to-res-s \$0-note-to-res-r empty 17
-7 0 10 #d83814 #d83814 #d83814 0 1;
-#X obj 685 137 tgl 15 0 \$0-note-to-harm-s \$0-note-to-harm-r empty
-17 7 0 10 #d83814 #d83814 #d83814 0 1;
-#X obj 685 157 tgl 15 0 \$0-note-to-mod-s \$0-note-to-mod-r empty 17
-7 0 10 #d83814 #d83814 #d83814 0 1;
-#X obj 685 217 tgl 15 0 \$0-note-to-amp-s \$0-note-to-amp-r empty 17
-7 0 10 #d83814 #d83814 #d83814 0 1;
-#X obj 685 177 tgl 15 0 \$0-note-to-freq-s \$0-note-to-freq-r empty
-17 7 0 10 #d83814 #d83814 #d83814 0 1;
-#X obj 748 157 tgl 15 0 \$0-lfo0-to-mod-s \$0-lfo0-to-mod-r empty 17
-7 0 10 #14a464 #14a464 #14a464 0 1;
-#X obj 748 137 tgl 15 0 \$0-lfo0-to-harm-s \$0-lfo0-to-harm-r empty
-17 7 0 10 #14a464 #14a464 #14a464 0 1;
-#X obj 748 217 tgl 15 0 \$0-lfo0-to-amp-s \$0-lfo0-to-amp-r empty 17
-7 0 10 #14a464 #14a464 #14a464 0 1;
-#X obj 706 217 tgl 15 0 \$0-lfo1-to-amp-s \$0-lfo1-to-amp-r empty 17
-7 0 10 #1874c4 #1874c4 #1874c4 0 1;
-#X obj 727 197 tgl 15 0 \$0-env1-to-res-s \$0-env1-to-res-r empty 17
-7 0 10 #ec9438 #ec9438 #ec9438 0 1;
-#X obj 727 137 tgl 15 0 \$0-env1-to-harm-s \$0-env1-to-harm-r empty
-17 7 0 10 #ec9438 #ec9438 #ec9438 0 1;
-#X obj 727 157 tgl 15 0 \$0-env1-to-mod-s \$0-env1-to-mod-r empty 17
-7 0 10 #ec9438 #ec9438 #ec9438 0 1;
-#X obj 727 217 tgl 15 0 \$0-env1-to-amp-s \$0-env1-to-amp-r empty 17
-7 0 10 #ec9438 #ec9438 #ec9438 0 1;
-#X obj 769 197 tgl 15 0 \$0-env0-to-res-s \$0-env0-to-res-r empty 17
-7 0 10 #202020 #202020 #202020 0 1;
-#X obj 769 137 tgl 15 0 \$0-env0-to-harm-s \$0-env0-to-harm-r empty
-17 7 0 10 #202020 #202020 #202020 0 1;
-#X obj 769 157 tgl 15 0 \$0-env0-to-mod-s \$0-env0-to-mod-r empty 17
-7 0 10 #202020 #202020 #202020 0 1;
-#X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
-7 0 10 #202020 #202020 #202020 0 1;
-#X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 #54682c #f4f4dc
-0;
-#X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 #54682c #f4f4dc
-0;
-#X obj 650 138 cnv 11 30 13 empty empty harm. 1 6 0 10 #880000 #f4f4dc
-0;
-#X obj 661 218 cnv 11 19 13 empty empty amp 1 6 0 10 #2c4c4c #f4f4dc
-0;
-#X obj 656 158 cnv 11 24 13 empty empty mod. 1 6 0 10 #880000 #f4f4dc
-0;
-#X obj 802 131 cnv 15 46 69 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 807 149 nbx 3 15 0 127 0 0 \$0-note-min-s \$0-note-min-r min
-10 -8 0 10 #d83814 #f4f4dc #202020 0 256;
-#X obj 807 179 nbx 3 15 0 127 0 0 \$0-note-max-s \$0-note-max-r max
-10 -8 0 10 #d83814 #f4f4dc #202020 0 256;
-#X obj 854 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 862 145 hsl 48 10 0.2 20 1 0 \$0-lfo1-freq-s \$0-lfo1-freq-r
-freq 12 -8 0 10 #1874c4 #f4f4dc #202020 0 1;
-#X obj 860 172 hradio 10 1 0 5 \$0-lfo1-shape-s \$0-lfo1-shape-r sinewave
-1 -8 0 10 #1874c4 #f4f4dc #202020 0;
-#X obj 1021 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 1029 145 hsl 48 10 0.2 20 1 0 \$0-lfo0-freq-s \$0-lfo0-freq-r
-freq 12 -8 0 10 #14a464 #f4f4dc #202020 0 1;
-#X obj 1027 172 hradio 10 1 0 5 \$0-lfo0-shape-s \$0-lfo0-shape-r sinewave
-1 -8 0 10 #14a464 #f4f4dc #202020 0;
-#X obj 1090 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 1095 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 1095 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 1095 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 1095 190 cnv 15 15 15 empty \$0-bg rel 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 1116 128 nbx 4 15 0 1e+37 0 0 \$0-env0-att-s \$0-env0-att-r
-ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
-#X obj 1116 148 nbx 4 15 0 1e+37 0 0 \$0-env0-dec-s \$0-env0-dec-r
-ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
-#X obj 1116 168 nbx 4 15 0 100 0 0 \$0-env0-sus-s \$0-env0-sus-r %
-50 8 0 10 #202020 #f4f4dc #202020 0 256;
-#X obj 1116 188 nbx 4 15 0 1e+37 0 0 \$0-env0-rel-s \$0-env0-rel-r
-ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
-#X obj 1021 99 cnv 15 63 23 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 762 102 cnv 15 15 15 empty \$0-bg env_A 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 741 118 cnv 15 15 15 empty \$0-bg lfo_A 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 720 102 cnv 15 15 15 empty \$0-bg env_B 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 699 118 cnv 15 15 15 empty \$0-bg lfo_B 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 681 102 cnv 15 15 15 empty \$0-bg note 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 918 99 cnv 15 102 18 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 1038 107 cnv 15 15 15 empty \$0-bg lfo_A 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 923 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 928 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 928 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 928 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 928 190 cnv 15 15 5 empty \$0-bg rel 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 949 128 nbx 4 15 0 1e+37 0 0 \$0-env1-att-s \$0-env1-att-r ms
-50 8 0 10 #ec9438 #f4f4dc #202020 0 256;
-#X obj 949 148 nbx 4 15 0 1e+37 0 0 \$0-env1-dec-s \$0-env1-dec-r ms
-50 8 0 10 #ec9438 #f4f4dc #202020 0 256;
-#X obj 949 168 nbx 4 15 0 100 0 0 \$0-env1-sus-s \$0-env1-sus-r % 50
-8 0 10 #ec9438 #f4f4dc #202020 0 256;
-#X obj 949 188 nbx 4 15 0 1e+37 0 0 \$0-env1-rel-s \$0-env1-rel-r ms
-50 8 0 10 #ec9438 #f4f4dc #202020 0 256;
-#X obj 955 102 cnv 15 15 15 empty \$0-bg env_B 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 966 253 cnv 2 2 69 empty empty empty 20 12 0 14 #202020 #fcfcfc
-0;
-#X obj 749 253 cnv 2 2 69 empty empty empty 20 12 0 14 #202020 #fcfcfc
-0;
-#X obj 775 118 cnv 2 1 15 empty empty empty 20 12 0 14 #202020 #f4f4dc
-0;
-#X obj 733 118 cnv 2 1 15 empty empty empty 20 12 0 14 #202020 #f4f4dc
-0;
-#X obj 691 118 cnv 2 1 15 empty empty empty 20 12 0 14 #202020 #fcfcfc
-0;
 #X obj 144 515 ./mng \$0 res 8;
-#X obj 865 187 bng 10 250 50 0 \$0-lfo1-reset \$0-lfo1-reset-r reset
-13 5 0 10 #5454fc #fcfcfc #202020;
-#X obj 1032 187 bng 10 250 50 0 \$0-lfo0-reset \$0-lfo0-reset-r reset
-13 5 0 10 #14a464 #f4f4dc #202020;
 #X obj 619 548 ./uimng \$0 res;
 #X obj 619 498 ./uimng \$0 mod;
-#X obj 654 109 cnv 9 9 9 empty \$0-note-to-freq-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-freq-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-freq-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-freq-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-note-to-res-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-res-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-res-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-res-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-res-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
 #X obj 619 523 ./uimng \$0 freq;
-#X obj 654 109 cnv 9 9 9 empty \$0-note-to-harm-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-harm-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-harm-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-harm-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-harm-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-note-to-mod-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-mod-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-mod-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-mod-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-mod-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-note-to-amp-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-amp-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-amp-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-amp-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
-#X obj 772 220 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
-#f4f4dc #f4f4dc 0;
 #X obj 354 415 r \$0-amp;
 #X obj 354 440 + 100;
 #X obj 354 465 dbtorms;
@@ -354,8 +78,6 @@ ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
 #X obj 189 114 s \$0-vel;
 #X obj 878 413 ./env \$0 0;
 #X obj 183 265 ./mng \$0 mod 0.5;
-#X obj 942 260 tgl 10 0 \$0-freq-tune-s \$0-freq-tune-r tune -6 -8
-0 10 #54682c #f4f4dc #202020 0 1;
 #X obj 11 540 *~ 1.42;
 #X obj 10 199 line~;
 #X obj 10 59 poly 1 1, f 26;
@@ -531,8 +253,6 @@ ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
 #X obj 10 237 ./param.get 79 \$0-freq-mult;
 #X restore 10 556 pd extra;
 #X restore 1200 596 pd camomile;
-#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-freq-tog empty 1 4 0 10
-#f4f4dc #f4f4dc 0;
 #X obj 745 498 ./redrawmng \$0 mod;
 #X obj 745 523 ./redrawmng \$0 freq;
 #X obj 745 548 ./redrawmng \$0 res;
@@ -582,18 +302,6 @@ ms 50 8 0 10 #202020 #f4f4dc #202020 0 256;
 #X obj 163 164 ./mng \$0 harm 7;
 #X obj 117 114 r \$0-harm;
 #X obj 619 573 ./uimng \$0 amp;
-#X obj 923 214 cnv 15 92 23 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 1090 214 cnv 10 92 23 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 1125 218 cnv 15 15 15 empty \$0-preset-label default 0 7 0 10
-#f4f4dc #202020 0;
-#X obj 1110 220 bng 10 250 50 0 \$0-preset-next \$0-preset-next-r >
-3 5 0 10 #202020 #f4f4dc #f4f4dc;
-#X obj 1100 105 bng 10 250 50 0 \$0-preset-prev \$0-preset-prev-r <
-2 5 0 10 #202020 #f4f4dc #f4f4dc;
-#X obj 721 260 tgl 10 0 \$0-harm-int-s \$0-harm-int-r int -3 -8 0 10
-#880000 #f4f4dc #202020 0 1;
 #X obj 454 33 inlet;
 #N canvas 685 52 679 692 route-inlet-messages 0;
 #X obj 12 12 inlet;
@@ -1331,29 +1039,9 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 11 0 4 0;
 #X connect 12 0 0 0;
 #X restore 72 214 pd round;
-#X obj 927 220 cnv 15 15 15 empty \$0-bg gliss 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 960 218 nbx 3 15 0 999 0 0 \$0-gliss-s \$0-gliss-r ms 41 8 0
-10 #202020 #f4f4dc #202020 0 256;
 #X obj 35 119 r \$0-gliss;
 #X obj 35 144 + 1;
 #X obj 10 169 pack;
-#X obj 1021 209 cnv 10 63 28 empty \$0-bg empty 20 12 0 14 #f4f4dc
-#202020 0;
-#X obj 804 206 cnv 15 15 15 empty \$0-bg pmatrix~ 0 7 0 10 #202020
-#f4f4dc 0;
-#X obj 815 222 cnv 15 15 15 empty \$0-bg 2023_dylan_martin 0 7 0 10
-#202020 #f4f4dc 0;
-#X obj 830 112 nbx 1 14 1 5 0 0 \$0-freq-mult-s \$0-freq-mult-r multiplier
--20 -8 0 10 #54682c #f4f4dc #f4f4dc 0 256;
-#X obj 802 99 cnv 15 46 26 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 813 110 cnv 15 15 15 empty \$0-bg note 0 6 0 10 #f4f4dc #202020
-0;
-#X obj 849 99 cnv 15 68 23 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 872 107 cnv 15 15 15 empty \$0-bg lfo_B 0 6 0 10 #f4f4dc #202020
-0;
 #N canvas 685 52 679 692 freq-tune-redraw 0;
 #X obj 464 208 r \$0-freq-tune;
 #X msg 527 238 bang;
@@ -1462,10 +1150,6 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 19 0 18 1;
 #X connect 20 0 21 0;
 #X restore 68 515 pd freq;
-#X obj 1085 99 cnv 15 97 18 empty \$0-bg empty 20 12 0 14 #f4f4dc #202020
-0;
-#X obj 1122 102 cnv 15 15 15 empty \$0-bg env_A 0 6 0 10 #f4f4dc #202020
-0;
 #N canvas 913 52 451 692 preset-redraw 0;
 #X msg 32 85 bang;
 #X obj 32 110 delay 5;
@@ -1479,9 +1163,6 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X restore 745 623 pd preset-redraw;
-#X obj 301 665 dac~;
-#X obj 10 10 notein;
-#X obj 10 34 pack;
 #N canvas 26 26 1366 685 random 0;
 #X obj 86 102 random 7;
 #X obj 86 177 + 1;
@@ -2356,33 +2037,352 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 357 0 344 0;
 #X connect 358 0 356 0;
 #X restore 587 53 pd random;
+#X obj 638 93 cnv 15 550 245 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 862 243 cnv 15 211 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 977 292 vsl 10 32 0 1 0 0 \$0-note-to-res-amount-s \$0-note-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 991 290 tgl 10 0 \$0-note-to-res-invert-s \$0-note-to-res-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 991 260 hsl 64 10 0.12 12 1 0 \$0-res-s \$0-res-r resonance
+5 -8 0 10 -87692 -253816 -33289 0 1;
+#X obj 1008 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-res-amount-s \$0-lfo1-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1025 292 vsl 10 32 0 1 0 0 \$0-env1-to-res-amount-s \$0-env1-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1041 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-res-amount-s \$0-lfo0-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1058 292 vsl 10 32 0 1 0 0 \$0-env0-to-res-amount-s \$0-env0-to-res-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 869 260 hsl 64 10 50 5000 1 0 \$0-freq-s \$0-freq-r frequency
+5 -8 0 10 -87692 -253816 -33289 12600 1;
+#X obj 880 290 tgl 10 0 \$0-note-to-freq-invert-s \$0-note-to-freq-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 897 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-freq-amount-s \$0-lfo1-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 914 292 vsl 10 32 0 1 0 0 \$0-env1-to-freq-amount-s \$0-env1-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 930 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-freq-amount-s \$0-lfo0-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 947 292 vsl 10 32 0 1 0 0 \$0-env0-to-freq-amount-s \$0-env0-to-freq-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 866 292 vsl 10 32 0 1 0 0 \$0-note-to-freq-amount-s \$0-note-to-freq-amount-r
+empty 14 30 0 10 -253816 -33289 -33289 0 1;
+#X obj 644 243 cnv 15 212 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 680 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-harm-amount-s \$0-lfo1-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 649 292 vsl 10 32 0 1 0 0 \$0-note-to-harm-amount-s \$0-note-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 663 290 tgl 10 0 \$0-note-to-harm-invert-s \$0-note-to-harm-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 774 260 hsl 64 10 0.02 2 1 0 \$0-mod-s \$0-mod-r modulation
+2 -8 0 10 -139265 -253816 -33289 0 1;
+#X obj 760 292 vsl 10 32 0 1 0 0 \$0-note-to-mod-amount-s \$0-note-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 774 290 tgl 10 0 \$0-note-to-mod-invert-s \$0-note-to-mod-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 671 260 nbx 1 14 1 7 0 0 \$0-harm-s \$0-harm-r harmonic -14
+-8 0 10 -139265 -253816 -33289 1 256;
+#X obj 791 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-mod-amount-s \$0-lfo1-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 697 292 vsl 10 32 0 1 0 0 \$0-env1-to-harm-amount-s \$0-env1-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 713 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-harm-amount-s \$0-lfo0-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 730 292 vsl 10 32 0 1 0 0 \$0-env0-to-harm-amount-s \$0-env0-to-harm-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 808 292 vsl 10 32 0 1 0 0 \$0-env1-to-mod-amount-s \$0-env1-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 824 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-mod-amount-s \$0-lfo0-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 841 292 vsl 10 32 0 1 0 0 \$0-env0-to-mod-amount-s \$0-env0-to-mod-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1079 243 cnv 15 103 89 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1086 292 vsl 10 32 0 0.95 0 0 \$0-note-to-amp-amount-s \$0-note-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1101 290 tgl 10 0 \$0-note-to-amp-invert-s \$0-note-to-amp-invert-r
+invert -12 -7 0 10 -253816 -33289 -33289 0 1;
+#X obj 1117 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-amp-amount-s \$0-lfo1-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1134 292 vsl 10 32 0 1 0 0 \$0-env1-to-amp-amount-s \$0-env1-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1150 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-amp-amount-s \$0-lfo0-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1167 292 vsl 10 32 0 1 0 0 \$0-env0-to-amp-amount-s \$0-env0-to-amp-amount-r
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
+#X obj 1130 260 hsl 45 10 1 6 1 0 \$0-overdrive-s \$0-overdrive-r overdrive
+-5 -8 0 10 -46292 -253816 -33289 0 1;
+#X obj 1086 260 nbx 3 14 -100 9 0 0 \$0-amp-s \$0-amp-r amp 8 -8 0
+10 -46292 -253816 -33289 0 256;
+#X obj 644 99 cnv 15 152 138 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 769 177 tgl 15 0 \$0-env0-to-freq-s \$0-env0-to-freq-r empty
+17 7 0 10 -33289 -33289 -33289 0 1;
+#X obj 727 177 tgl 15 0 \$0-env1-to-freq-s \$0-env1-to-freq-r empty
+17 7 0 10 -244047 -244047 -244047 0 1;
+#X obj 748 197 tgl 15 0 \$0-lfo0-to-res-s \$0-lfo0-to-res-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 177 tgl 15 0 \$0-lfo0-to-freq-s \$0-lfo0-to-freq-r empty
+17 7 0 10 -23130 -23130 -23130 0 1;
+#X obj 706 197 tgl 15 0 \$0-lfo1-to-res-s \$0-lfo1-to-res-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 137 tgl 15 0 \$0-lfo1-to-harm-s \$0-lfo1-to-harm-r empty
+17 7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 157 tgl 15 0 \$0-lfo1-to-mod-s \$0-lfo1-to-mod-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 706 177 tgl 15 0 \$0-lfo1-to-freq-s \$0-lfo1-to-freq-r empty
+17 7 0 10 -26482 -26482 -26482 0 1;
+#X obj 685 197 tgl 15 0 \$0-note-to-res-s \$0-note-to-res-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 137 tgl 15 0 \$0-note-to-harm-s \$0-note-to-harm-r empty
+17 7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 157 tgl 15 0 \$0-note-to-mod-s \$0-note-to-mod-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 217 tgl 15 0 \$0-note-to-amp-s \$0-note-to-amp-r empty 17
+7 0 10 -222086 -222086 -222086 0 1;
+#X obj 685 177 tgl 15 0 \$0-note-to-freq-s \$0-note-to-freq-r empty
+17 7 0 10 -222086 -222086 -222086 0 1;
+#X obj 748 157 tgl 15 0 \$0-lfo0-to-mod-s \$0-lfo0-to-mod-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 137 tgl 15 0 \$0-lfo0-to-harm-s \$0-lfo0-to-harm-r empty
+17 7 0 10 -23130 -23130 -23130 0 1;
+#X obj 748 217 tgl 15 0 \$0-lfo0-to-amp-s \$0-lfo0-to-amp-r empty 17
+7 0 10 -23130 -23130 -23130 0 1;
+#X obj 706 217 tgl 15 0 \$0-lfo1-to-amp-s \$0-lfo1-to-amp-r empty 17
+7 0 10 -26482 -26482 -26482 0 1;
+#X obj 727 197 tgl 15 0 \$0-env1-to-res-s \$0-env1-to-res-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 137 tgl 15 0 \$0-env1-to-harm-s \$0-env1-to-harm-r empty
+17 7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 157 tgl 15 0 \$0-env1-to-mod-s \$0-env1-to-mod-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 727 217 tgl 15 0 \$0-env1-to-amp-s \$0-env1-to-amp-r empty 17
+7 0 10 -244047 -244047 -244047 0 1;
+#X obj 769 197 tgl 15 0 \$0-env0-to-res-s \$0-env0-to-res-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 137 tgl 15 0 \$0-env0-to-harm-s \$0-env0-to-harm-r empty
+17 7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 157 tgl 15 0 \$0-env0-to-mod-s \$0-env0-to-mod-r empty 17
+7 0 10 -33289 -33289 -33289 0 1;
+#X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
+7 0 10 -33289 -33289 -33289 1 1;
+#X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
+0;
+#X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
+0;
+#X obj 650 138 cnv 11 30 13 empty empty harm. 1 6 0 10 -139265 -253816
+0;
+#X obj 661 218 cnv 11 19 13 empty empty amp 1 6 0 10 -46292 -253816
+0;
+#X obj 656 158 cnv 11 24 13 empty empty mod. 1 6 0 10 -139265 -253816
+0;
+#X obj 802 131 cnv 15 46 69 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 807 149 nbx 3 15 0 127 0 0 \$0-note-min-s \$0-note-min-r min
+10 -8 0 10 -222086 -253816 -33289 0 256;
+#X obj 807 179 nbx 3 15 0 127 0 0 \$0-note-max-s \$0-note-max-r max
+10 -8 0 10 -222086 -253816 -33289 127 256;
+#X obj 854 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 862 145 hsl 48 10 0.2 20 1 0 \$0-lfo1-freq-s \$0-lfo1-freq-r
+freq 12 -8 0 10 -26482 -253816 -33289 0 1;
+#X obj 860 172 hradio 10 1 0 5 \$0-lfo1-shape-s \$0-lfo1-shape-r sinewave
+1 -8 0 10 -253816 -26482 -33289 0;
+#X obj 1021 128 cnv 15 63 75 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1029 145 hsl 48 10 0.2 20 1 0 \$0-lfo0-freq-s \$0-lfo0-freq-r
+freq 12 -8 0 10 -23130 -253816 -33289 0 1;
+#X obj 1027 172 hradio 10 1 0 5 \$0-lfo0-shape-s \$0-lfo0-shape-r sinewave
+1 -8 0 10 -253816 -23130 -33289 0;
+#X obj 1090 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1095 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 -253816 -33289
+0;
+#X obj 1095 190 cnv 15 15 15 empty \$0-bg rel 0 6 0 10 -253816 -33289
+0;
+#X obj 1116 128 nbx 4 15 0 1e+37 0 0 \$0-env0-att-s \$0-env0-att-r
+ms 50 8 0 10 -33289 -253816 -33289 5 256;
+#X obj 1116 148 nbx 4 15 0 1e+37 0 0 \$0-env0-dec-s \$0-env0-dec-r
+ms 50 8 0 10 -33289 -253816 -33289 0 256;
+#X obj 1116 168 nbx 4 15 0 100 0 0 \$0-env0-sus-s \$0-env0-sus-r %
+50 8 0 10 -33289 -253816 -33289 100 256;
+#X obj 1116 188 nbx 4 15 0 1e+37 0 0 \$0-env0-rel-s \$0-env0-rel-r
+ms 50 8 0 10 -33289 -253816 -33289 50 256;
+#X obj 1021 99 cnv 15 63 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 762 102 cnv 10 15 18 empty \$0-bg env_A 0 6 0 10 -253816 -33289
+0;
+#X obj 741 118 cnv 15 15 15 empty \$0-bg lfo_A 0 6 0 10 -253816 -33289
+0;
+#X obj 720 102 cnv 10 15 18 empty \$0-bg env_B 0 6 0 10 -253816 -33289
+0;
+#X obj 699 118 cnv 15 15 15 empty \$0-bg lfo_B 0 6 0 10 -253816 -33289
+0;
+#X obj 681 102 cnv 10 15 18 empty \$0-bg note 0 6 0 10 -253816 -33289
+0;
+#X obj 917 99 cnv 15 104 18 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1038 107 cnv 14 15 15 empty \$0-bg lfo_A 0 6 0 10 -253816 -33289
+0;
+#X obj 923 123 cnv 15 92 85 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 928 130 cnv 15 15 15 empty \$0-bg att 0 6 0 10 -253816 -33289
+0;
+#X obj 928 150 cnv 15 15 15 empty \$0-bg dec 0 6 0 10 -253816 -33289
+0;
+#X obj 928 170 cnv 15 15 15 empty \$0-bg sus 0 6 0 10 -253816 -33289
+0;
+#X obj 928 190 cnv 15 15 5 empty \$0-bg rel 0 6 0 10 -253816 -33289
+0;
+#X obj 949 128 nbx 4 15 0 1e+37 0 0 \$0-env1-att-s \$0-env1-att-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 148 nbx 4 15 0 1e+37 0 0 \$0-env1-dec-s \$0-env1-dec-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 168 nbx 4 15 0 100 0 0 \$0-env1-sus-s \$0-env1-sus-r % 50
+8 0 10 -244047 -253816 -33289 0 256;
+#X obj 949 188 nbx 4 15 0 1e+37 0 0 \$0-env1-rel-s \$0-env1-rel-r ms
+50 8 0 10 -244047 -253816 -33289 0 256;
+#X obj 955 102 cnv 14 15 15 empty \$0-bg env_B 0 6 0 10 -253816 -33289
+0;
+#X obj 966 253 cnv 2 2 69 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 749 253 cnv 2 2 69 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 775 115 cnv 2 1 18 empty empty empty 20 12 0 14 -33289 -253816
+0;
+#X obj 733 115 cnv 2 1 18 empty empty empty 20 12 0 14 -33289 -253816
+0;
+#X obj 691 115 cnv 2 1 18 empty empty empty 20 12 0 14 -33289 -262144
+0;
+#X obj 865 187 bng 10 250 50 0 \$0-lfo1-reset \$0-lfo1-reset-r reset
+13 5 0 10 -87424 -262144 -33289;
+#X obj 1032 187 bng 10 250 50 0 \$0-lfo0-reset \$0-lfo0-reset-r reset
+13 5 0 10 -23130 -253816 -33289;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-freq-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-res-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-harm-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-mod-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-note-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo1-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
+-253816 -253816 0;
+#X obj 942 260 tgl 10 0 \$0-freq-tune-s \$0-freq-tune-r tune -6 -8
+0 10 -87692 -253816 -33289 0 1;
+#X obj 654 109 cnv 9 9 9 empty \$0-env1-to-freq-tog empty 1 4 0 10
+-253816 -253816 0;
+#X obj 923 214 cnv 15 92 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1090 214 cnv 10 92 23 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 1125 218 cnv 15 15 15 empty \$0-preset-label default 0 7 0 10
+-253816 -33289 0;
+#X obj 1110 220 bng 10 250 50 0 \$0-preset-next \$0-preset-next-r >
+3 5 0 10 -33289 -253816 -253816;
+#X obj 1095 100 bng 10 250 50 0 \$0-preset-prev \$0-preset-prev-r <
+2 5 0 10 -33289 -253816 -253816;
+#X obj 721 260 tgl 10 0 \$0-harm-int-s \$0-harm-int-r int -3 -8 0 10
+-139265 -253816 -33289 0 1;
+#X obj 927 220 cnv 15 15 15 empty \$0-bg gliss 0 6 0 10 -253816 -33289
+0;
+#X obj 960 218 nbx 3 15 0 999 0 0 \$0-gliss-s \$0-gliss-r ms 41 8 0
+10 -33289 -253816 -33289 0 256;
+#X obj 1021 209 cnv 10 63 28 empty \$0-bg empty 20 12 0 14 -253816
+-33289 0;
+#X obj 804 206 cnv 15 15 15 empty \$0-bg pmatrix~ 0 7 0 10 -33289 -253816
+0;
+#X obj 815 222 cnv 15 15 15 empty \$0-bg 2023_dylan_martin 0 7 0 10
+-33289 -253816 0;
+#X obj 830 112 nbx 1 14 1 5 0 0 \$0-freq-mult-s \$0-freq-mult-r multiplier
+-20 -8 0 10 -87692 -253816 -253816 1 256;
+#X obj 802 99 cnv 15 46 26 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 813 110 cnv 14 15 15 empty \$0-bg note 0 6 0 10 -253816 -33289
+0;
+#X obj 848 99 cnv 15 69 23 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 872 107 cnv 14 15 15 empty \$0-bg lfo_B 0 6 0 10 -253816 -33289
+0;
+#X obj 1084 99 cnv 15 98 18 empty \$0-bg empty 20 12 0 14 -253816 -33289
+0;
+#X obj 1122 102 cnv 14 15 15 empty \$0-bg env_A 0 6 0 10 -253816 -33289
+0;
 #X obj 1034 220 nbx 3 15 0 999 0 0 \$0-seed \$0-seed-r seed 6 -5 0
-10 #202020 #f4f4dc #202020 0 256;
+10 -33289 -253816 -33289 0 256;
+#X obj 301 665 dac~;
+#X obj 10 9 notein, f 7;
+#X obj 10 34 pack;
 #X connect 0 0 1 0;
 #X connect 1 0 4 1;
 #X connect 2 0 4 0;
-#X connect 3 0 218 0;
+#X connect 3 0 79 0;
 #X connect 4 0 3 0;
 #X connect 5 0 13 0;
 #X connect 6 0 5 0;
 #X connect 7 0 0 0;
-#X connect 8 0 206 0;
-#X connect 9 0 250 0;
+#X connect 8 0 68 0;
+#X connect 9 0 102 0;
 #X connect 10 0 25 0;
 #X connect 11 0 12 0;
-#X connect 12 0 209 0;
+#X connect 12 0 71 0;
 #X connect 13 0 1 1;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 10 2;
 #X connect 18 0 19 0;
 #X connect 19 0 20 0;
-#X connect 20 0 245 0;
+#X connect 20 0 99 0;
 #X connect 21 0 8 0;
 #X connect 22 0 23 0;
 #X connect 23 0 24 0;
 #X connect 24 0 44 0;
-#X connect 25 0 227 0;
+#X connect 25 0 87 0;
 #X connect 26 0 27 0;
 #X connect 27 0 25 1;
 #X connect 28 0 30 1;
@@ -2417,41 +2417,41 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 56 1 53 1;
 #X connect 57 0 31 0;
 #X connect 58 0 11 0;
-#X connect 171 0 16 1;
-#X connect 201 0 202 0;
-#X connect 202 0 203 0;
-#X connect 203 0 204 0;
-#X connect 204 0 205 0;
-#X connect 205 0 206 1;
-#X connect 206 0 207 0;
-#X connect 207 0 208 0;
-#X connect 208 0 211 0;
-#X connect 210 0 209 1;
-#X connect 211 0 228 0;
-#X connect 212 0 214 0;
-#X connect 216 0 13 1;
-#X connect 218 0 10 0;
-#X connect 219 0 2 0;
-#X connect 219 0 7 0;
-#X connect 219 0 260 0;
-#X connect 220 1 17 0;
-#X connect 220 1 9 0;
-#X connect 220 2 212 0;
-#X connect 227 0 21 0;
-#X connect 228 0 264 0;
-#X connect 228 0 264 1;
-#X connect 231 0 20 1;
-#X connect 232 0 18 0;
-#X connect 240 0 241 0;
-#X connect 243 0 242 0;
-#X connect 244 0 241 0;
-#X connect 245 0 7 1;
-#X connect 248 0 249 0;
-#X connect 249 0 250 1;
-#X connect 250 0 219 0;
-#X connect 260 0 10 1;
-#X connect 265 0 266 0;
-#X connect 265 1 266 1;
-#X connect 266 0 220 0;
-#X connect 267 0 241 0;
+#X connect 59 0 16 1;
+#X connect 63 0 64 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 66 0 67 0;
+#X connect 67 0 68 1;
+#X connect 68 0 69 0;
+#X connect 69 0 70 0;
+#X connect 70 0 73 0;
+#X connect 72 0 71 1;
+#X connect 73 0 88 0;
+#X connect 74 0 76 0;
+#X connect 78 0 13 1;
+#X connect 79 0 10 0;
+#X connect 80 0 2 0;
+#X connect 80 0 7 0;
+#X connect 80 0 104 0;
+#X connect 81 1 17 0;
+#X connect 81 1 9 0;
+#X connect 81 2 74 0;
+#X connect 87 0 21 0;
+#X connect 88 0 266 0;
+#X connect 88 0 266 1;
+#X connect 91 0 20 1;
+#X connect 92 0 18 0;
+#X connect 94 0 95 0;
+#X connect 97 0 96 0;
+#X connect 98 0 95 0;
+#X connect 99 0 7 1;
+#X connect 100 0 101 0;
+#X connect 101 0 102 1;
+#X connect 102 0 80 0;
+#X connect 104 0 10 1;
+#X connect 106 0 95 0;
+#X connect 267 0 268 0;
+#X connect 267 1 268 1;
+#X connect 268 0 81 0;
 #X coords 0 -1 1 1 550 245 2 638 93;
