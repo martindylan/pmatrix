@@ -257,7 +257,7 @@
 #X obj 745 523 ./redrawmng \$0 freq;
 #X obj 745 548 ./redrawmng \$0 res;
 #X obj 745 573 ./redrawmng \$0 amp;
-#N canvas 685 52 679 692 softlimit 0;
+#N canvas 913 52 451 692 softlimit 0;
 #X obj 100 189 *~ 2;
 #X obj 75 214 pow~;
 #X msg 75 164 2.71828;
@@ -277,7 +277,7 @@
 #X connect 6 0 2 0;
 #X connect 7 0 0 0;
 #X restore 10 690 pd softlimit;
-#N canvas 685 52 679 692 softlimit 0;
+#N canvas 913 52 451 692 softlimit 0;
 #X obj 100 189 *~ 2;
 #X obj 75 214 pow~;
 #X msg 75 164 2.71828;
@@ -2056,7 +2056,7 @@ empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1058 292 vsl 10 32 0 1 0 0 \$0-env0-to-res-amount-s \$0-env0-to-res-amount-r
 empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 869 260 hsl 64 10 50 5000 1 0 \$0-freq-s \$0-freq-r frequency
-5 -8 0 10 -87692 -253816 -33289 12600 1;
+5 -8 0 10 -87692 -253816 -33289 6300 1;
 #X obj 880 290 tgl 10 0 \$0-note-to-freq-invert-s \$0-note-to-freq-invert-r
 invert -12 -7 0 10 -253816 -33289 -33289 0 1;
 #X obj 897 292 vsl 10 32 0 1 0 0 \$0-lfo1-to-freq-amount-s \$0-lfo1-to-freq-amount-r
@@ -2168,7 +2168,7 @@ empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 769 157 tgl 15 0 \$0-env0-to-mod-s \$0-env0-to-mod-r empty 17
 7 0 10 -33289 -33289 -33289 0 1;
 #X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
-7 0 10 -33289 -33289 -33289 1 1;
+7 0 10 -33289 -33289 -33289 0 1;
 #X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
 0;
 #X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
@@ -2355,9 +2355,10 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 0;
 #X obj 1034 220 nbx 3 15 0 999 0 0 \$0-seed \$0-seed-r seed 6 -5 0
 10 -33289 -253816 -33289 0 256;
-#X obj 301 665 dac~;
+#X obj 301 690 dac~;
 #X obj 10 9 notein, f 7;
 #X obj 10 34 pack;
+#X obj 301 665 *~ 1.3;
 #X connect 0 0 1 0;
 #X connect 1 0 4 1;
 #X connect 2 0 4 0;
@@ -2438,8 +2439,7 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 #X connect 81 1 9 0;
 #X connect 81 2 74 0;
 #X connect 87 0 21 0;
-#X connect 88 0 266 0;
-#X connect 88 0 266 1;
+#X connect 88 0 269 0;
 #X connect 91 0 20 1;
 #X connect 92 0 18 0;
 #X connect 94 0 95 0;
@@ -2454,4 +2454,6 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 #X connect 267 0 268 0;
 #X connect 267 1 268 1;
 #X connect 268 0 81 0;
+#X connect 269 0 266 0;
+#X connect 269 0 266 1;
 #X coords 0 -1 1 1 550 245 2 638 93;
