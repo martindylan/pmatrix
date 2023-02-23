@@ -2016,7 +2016,7 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 357 0 344 0;
 #X connect 358 0 356 0;
 #X restore 587 53 pd random;
-#X obj 301 665 outlet~;
+#X obj 301 640 outlet~;
 #X obj 10 34 inlet;
 #X obj 638 93 cnv 15 550 245 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -2093,7 +2093,7 @@ empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1150 292 vsl 10 32 0 1 0 0 \$0-lfo0-to-amp-amount-s \$0-lfo0-to-amp-amount-r
 empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1167 292 vsl 10 32 0 1 0 0 \$0-env0-to-amp-amount-s \$0-env0-to-amp-amount-r
-empty 0 -9 0 10 -33289 -253816 -33289 3100 1;
+empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 #X obj 1130 260 hsl 45 10 1 6 1 0 \$0-overdrive-s \$0-overdrive-r overdrive
 -5 -8 0 10 -46292 -253816 -33289 0 1;
 #X obj 1086 260 nbx 3 14 -100 9 0 0 \$0-amp-s \$0-amp-r amp 8 -8 0
@@ -2149,7 +2149,7 @@ empty 0 -9 0 10 -33289 -253816 -33289 3100 1;
 #X obj 769 157 tgl 15 0 \$0-env0-to-mod-s \$0-env0-to-mod-r empty 17
 7 0 10 -33289 -33289 -33289 0 1;
 #X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
-7 0 10 -33289 -33289 -33289 1 1;
+7 0 10 -33289 -33289 -33289 0 1;
 #X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
 0;
 #X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
@@ -2292,7 +2292,7 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 -253816 -253816 0;
 #X obj 654 109 cnv 9 9 9 empty \$0-lfo0-to-amp-tog empty 20 12 0 14
 -253816 -253816 0;
-#X obj 772 220 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
+#X obj 654 109 cnv 9 9 9 empty \$0-env0-to-amp-tog empty 20 12 0 14
 -253816 -253816 0;
 #X obj 942 260 tgl 10 0 \$0-freq-tune-s \$0-freq-tune-r tune -6 -8
 0 10 -87692 -253816 -33289 0 1;
@@ -2302,11 +2302,11 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 0;
 #X obj 1090 214 cnv 10 92 23 empty \$0-bg empty 20 12 0 14 -253816
 -33289 0;
-#X obj 1125 218 cnv 15 15 15 empty \$0-preset-label default 0 7 0 10
+#X obj 1125 218 cnv 15 15 15 empty \$0-preset-label bassy 0 7 0 10
 -253816 -33289 0;
 #X obj 1110 220 bng 10 250 50 0 \$0-preset-next \$0-preset-next-r >
 3 5 0 10 -33289 -253816 -253816;
-#X obj 1100 105 bng 10 250 50 0 \$0-preset-prev \$0-preset-prev-r <
+#X obj 1095 220 bng 10 250 50 0 \$0-preset-prev \$0-preset-prev-r <
 2 5 0 10 -33289 -253816 -253816;
 #X obj 721 260 tgl 10 0 \$0-harm-int-s \$0-harm-int-r int -3 -8 0 10
 -139265 -253816 -33289 0 1;
@@ -2356,7 +2356,6 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 #X connect 6 0 2 0;
 #X connect 7 0 0 0;
 #X restore 301 615 pd softlimit;
-#X obj 301 640 *~ 1.3;
 #N canvas 685 52 679 692 lfo-shapes-redraw 0;
 #X msg 32 85 bang;
 #X obj 32 110 delay 5;
@@ -2461,6 +2460,5 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 #X connect 102 0 10 1;
 #X connect 104 0 93 0;
 #X connect 106 0 80 0;
-#X connect 266 0 267 0;
-#X connect 267 0 105 0;
+#X connect 266 0 105 0;
 #X coords 0 -1 1 1 551 251 2 638 90;
