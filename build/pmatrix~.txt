@@ -77,6 +77,8 @@ param -name freq tune -list off/on;
 param -name overdrive -min 1 -max 6;
 param -name gliss -label ms -min 0 -max 999;
 param -name freq multiplier -label x -min 1 -max 5 -nsteps 5;
+param -name lfo B reset -list off/on;
+param -name lfo A reset -list off/on
 
 type instrument;
 code dMae;
