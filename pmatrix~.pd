@@ -1,4 +1,4 @@
-#N canvas 2 52 1362 692 12;
+#N canvas 913 52 451 692 12;
 #X obj 49 289 osc~;
 #X obj 49 314 *~, f 13;
 #X obj 10 229 phasor~;
@@ -1027,7 +1027,7 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X obj 35 119 r \$0-gliss;
 #X obj 35 144 + 1;
 #X obj 10 169 pack;
-#N canvas 685 52 679 692 freq-tune-redraw 0;
+#N canvas 1026 52 338 692 freq-tune-redraw 0;
 #X obj 464 208 r \$0-freq-tune;
 #X msg 527 238 bang;
 #X obj 527 263 delay 5;
@@ -1050,6 +1050,11 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X msg 269 216 color \$1 \$2 \$3;
 #X msg 332 124 list #54682c #f4f4dc #f4f4dc, f 7;
 #X msg 269 124 list #54682c #f4f4dc #202020, f 7;
+#X msg 374 427 freq.;
+#X msg 374 482 label \$1;
+#X obj 374 507 s \$0-freq-label;
+#X msg 413 427 mult.;
+#X obj 374 457 symbol;
 #X connect 0 0 1 0;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
@@ -1062,8 +1067,10 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 8 0 20 0;
 #X connect 9 0 5 0;
 #X connect 9 0 12 0;
+#X connect 9 0 22 0;
 #X connect 9 1 8 0;
 #X connect 9 1 13 0;
+#X connect 9 1 25 0;
 #X connect 10 0 11 0;
 #X connect 12 0 10 0;
 #X connect 12 0 16 0;
@@ -1077,6 +1084,10 @@ amp env1 0 \, amp env1 amount 0 \, amp lfo0 0 \, amp lfo0 amount 0
 #X connect 19 0 7 0;
 #X connect 20 0 18 0;
 #X connect 21 0 18 0;
+#X connect 22 0 26 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 23 0;
 #X restore 745 598 pd freq-tune-redraw;
 #N canvas 685 52 679 692 freq 0;
 #N canvas 685 52 679 692 round 0;
@@ -2156,8 +2167,8 @@ empty 0 -9 0 10 -253816 -33289 -33289 0 1;
 7 0 10 -33289 -33289 -33289 0 1;
 #X obj 769 217 tgl 15 0 \$0-env0-to-amp-s \$0-env0-to-amp-r empty 17
 7 0 10 -33289 -33289 -33289 0 1;
-#X obj 650 178 cnv 11 30 13 empty empty freq. 1 6 0 10 -87692 -253816
-0;
+#X obj 650 178 cnv 11 30 13 empty \$0-freq-label freq. 1 6 0 10 -87692
+-253816 0;
 #X obj 656 198 cnv 11 24 13 empty empty res. 1 6 0 10 -87692 -253816
 0;
 #X obj 650 138 cnv 11 30 13 empty empty harm. 1 6 0 10 -139265 -253816
@@ -2249,7 +2260,7 @@ ms 50 8 0 10 -33289 -253816 -33289 50 256;
 #X obj 691 115 cnv 2 1 18 empty empty empty 20 12 0 14 -33289 -262144
 0;
 #X obj 865 187 bng 10 250 50 0 \$0-lfo1-reset \$0-lfo1-reset-r reset
-13 5 0 10 -87424 -262144 -33289;
+13 5 0 10 -26482 -262144 -33289;
 #X obj 1032 187 bng 10 250 50 0 \$0-lfo0-reset \$0-lfo0-reset-r reset
 13 5 0 10 -23130 -253816 -33289;
 #X obj 654 109 cnv 9 9 9 empty \$0-note-to-freq-tog empty 20 12 0 14
