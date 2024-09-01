@@ -77,12 +77,19 @@ param -name freq tune -list off/on;
 param -name overdrive -min 1 -max 6;
 param -name gliss -label ms -min 0 -max 999;
 param -name freq multiplier -label x -min 1 -max 5 -nsteps 5;
-param -name lfo B reset -list off/on;
-param -name lfo A reset -list off/on
+param -name lfo B reset -list off/on -default 0;
+param -name lfo A reset -list off/on;
+param -name lfo B sync -list off/on;
+param -name lfo A sync -list off/on;
+param -name lfo B num -min 1 -max 9 -nsteps 9;
+param -name lfo B den -min 1 -max 9 -nsteps 9;
+param -name lfo A num -min 1 -max 9 -nsteps 9;
+param -name lfo A den -min 1 -max 9 -nsteps 9;
 
 type instrument;
 code dMae;
 compatibility 1.0.7;
+playhead true;
 midiin true;
 bus 0 2;
 description info.txt;

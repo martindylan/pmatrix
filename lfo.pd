@@ -1,4 +1,4 @@
-#N canvas 685 52 679 692 12;
+#N canvas 685 37 679 692 12;
 #X msg 12 42 \$1 1;
 #X obj 12 67 line~;
 #X obj 12 392 *~;
@@ -52,6 +52,7 @@
 #X obj 494 237 symbol;
 #X msg 494 262 label \$1;
 #X obj 494 287 s \$1-lfo\$2-shape-r;
+#X obj 418 106 r \$1-lfo\$2-freq-sync;
 #X connect 0 0 1 0;
 #X connect 1 0 43 0;
 #X connect 2 0 26 0;
@@ -122,3 +123,4 @@
 #X connect 49 0 50 0;
 #X connect 50 0 51 0;
 #X connect 51 0 52 0;
+#X connect 53 0 0 0;
