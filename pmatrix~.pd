@@ -1,4 +1,4 @@
-#N canvas 0 0 1366 685 12;
+#N canvas 0 0 1366 725 12;
 #X obj 135 385 osc~;
 #X obj 135 433 *~, f 13;
 #X obj 96 322 phasor~;
@@ -181,7 +181,7 @@
 #X obj 10 611 ./param.set 50 \$0-env0-to-freq-amount;
 #X obj 10 636 ./param.get 50 \$0-env0-to-freq-amount;
 #X restore 10 481 pd freq;
-#N canvas 913 52 451 692 amp 0;
+#N canvas 913 37 451 692 amp 1;
 #X obj 10 11 ./param.set 63 \$0-amp;
 #X obj 10 36 ./param.get 63 \$0-amp;
 #X obj 10 71 ./param.set 64 \$0-note-to-amp;
@@ -239,11 +239,11 @@
 #X obj 10 62 ./param.set 76 \$0-freq-tune;
 #X obj 10 87 ./param.get.tog 76 \$0-freq-tune;
 #X obj 10 112 ./param.set 77 \$0-overdrive;
-#X obj 10 137 ./param.get.tog 77 \$0-overdrive;
 #X obj 10 162 ./param.set 78 \$0-gliss;
 #X obj 10 187 ./param.get 78 \$0-gliss;
 #X obj 10 212 ./param.set 79 \$0-freq-mult;
 #X obj 10 237 ./param.get 79 \$0-freq-mult;
+#X obj 10 137 ./param.get 77 \$0-overdrive;
 #X restore 10 556 pd extra;
 #X obj 236 431 ./param.set 80 \$0-lfo1-reset-bng;
 #X obj 236 455 ./param.get.tog 80 \$0-lfo1-reset-bng;
