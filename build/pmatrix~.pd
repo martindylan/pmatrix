@@ -2150,10 +2150,10 @@
 #X obj 714 381 s \$0-lfo1-reset-bng-s;
 #X obj 917 357 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 917 381 s \$0-lfo0-reset-bng-s;
-#X obj 904 347 bng 10 250 50 0 nullS nullR empty 13 5 0 10 #f4f4dc #1874c4 #202020;
-#X obj 1071 347 bng 10 250 50 0 nullS nullR empty 13 5 0 10 #f4f4dc #1874c4 #202020;
-#X obj 902 61 tgl 10 0 \$0-lfo1-sync-s \$0-lfo1-sync-r empty -3 -8 0 10 #1874c4 #f4f4dc #202020 0 1;
-#X obj 1069 61 tgl 10 0 \$0-lfo0-sync-s \$0-lfo0-sync-r empty -3 -8 0 10 #14a464 #f4f4dc #202020 0 1;
+#X obj 904 187 bng 10 250 50 0 nullS nullR empty 13 5 0 10 #f4f4dc #1874c4 #202020;
+#X obj 1071 187 bng 10 250 50 0 nullS nullR empty 13 5 0 10 #f4f4dc #1874c4 #202020;
+#X obj 902 131 tgl 10 0 \$0-lfo1-sync-s \$0-lfo1-sync-r empty -3 -8 0 10 #1874c4 #f4f4dc #202020 0 1;
+#X obj 1069 131 tgl 10 0 \$0-lfo0-sync-s \$0-lfo0-sync-r empty -3 -8 0 10 #14a464 #f4f4dc #202020 0 1;
 #N canvas 0 104 1273 625 sync 0;
 #X obj 133 174 route bpm;
 #X obj 133 150 r playhead;
